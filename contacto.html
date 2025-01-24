@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAMOS - Navbar</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <!-- Agregar antes del cierre del </head> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Google Fonts - Nunito Sans -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="contacto.css">
+    <script src="contact.js"></script>
+
+</head>
+<body>
+    <!-- Navbar con botones -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top w-100">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img class="group-39793-1wMAcK" src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39793@2x.png" alt="Logo VAMOS" />
+        </a>
+        
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Contenido del menú colapsable -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link preguntas-frecuentes" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn-contacto" href="faq.html">Preguntas Frecuentes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<!-- Modificar el formulario agregando ids -->
+<section class="contact-form">
+    <div class="container">
+        <form id="contact-form">
+            <h1>Cóntacto</h1>
+            
+            <div class="form-group">
+                <p>Nombre</p>
+                <input type="text" id="name" class="form-control custom-input" placeholder="Escribe tu nombre completo" required>
+            </div>
+
+            <div class="form-group">
+                <p>Correo</p>
+                <input type="email" id="email" class="form-control custom-input" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div class="form-group">
+                <p>Estoy interesado en: </p>
+                <div class="check-container">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="consulta" id="consulta1" value="Buscar Financiamiento" checked>
+                        <label class="form-check-label" for="consulta1">
+                            Buscar Financiamiento
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="consulta" id="consulta2" value="Participar apoyando">
+                        <label class="form-check-label" for="consulta2">
+                            Participar apoyando
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p>Comentarios</p>
+                <textarea id="comments" class="form-control custom-textarea" rows="5" placeholder="Escribe tus Comentarios aquí" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+    <footer class="new-footer">
+        <!-- Contenedor izquierdo -->
+        <div class="footer-left">
+            <img src="img/logo.svg" alt="Logo VAMOS" class="footer-logo">
+            <p class="footer-paragraph">
+                Partnering on impactful technological ventures <b>that drive the <br>
+                development</b> of individual and collective awareness for
+            </p>
+            <h1 class="footer-title"><b>a better life<br> and human unity.</b></h1>
+        </div>
+    
+        <!-- Contenedor derecho -->
+        <div class="footer-right">
+            <div class="social-logos">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/hola.thincrs/" target="_blank" class="social-icon">
+                    <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.0075 9.13613C24.0016 9.13613 24.8075 8.33024 24.8075 7.33613C24.8075 6.34202 24.0016 5.53613 23.0075 5.53613C22.0134 5.53613 21.2075 6.34202 21.2075 7.33613C21.2075 8.33024 22.0134 9.13613 23.0075 9.13613Z" fill="white"/>
+                        <path d="M14.9999 7.64111C10.7749 7.64111 7.29736 11.1186 7.29736 15.3436C7.29736 19.5686 10.7749 23.0461 14.9999 23.0461C19.2249 23.0461 22.7024 19.5686 22.7024 15.3436C22.7024 11.1186 19.2249 7.64111 14.9999 7.64111ZM14.9999 20.3436C12.2574 20.3436 9.99986 18.0861 9.99986 15.3436C9.99986 12.6011 12.2574 10.3436 14.9999 10.3436C17.7424 10.3436 19.9999 12.6011 19.9999 15.3436C19.9999 18.0861 17.7424 20.3436 14.9999 20.3436Z" fill="white"/>
+                        <path d="M15 3.04625C19.005 3.04625 19.48 3.06125 21.0613 3.13375C22.0125 3.145 22.955 3.32 23.8462 3.65C25.1537 4.155 26.1887 5.19 26.6937 6.4975C27.0238 7.38875 27.1987 8.33125 27.21 9.2825C27.2825 10.8638 27.2975 11.3387 27.2975 15.3438C27.2975 19.3487 27.2825 19.8238 27.21 21.405C27.1987 22.3563 27.0238 23.2987 26.6937 24.19C26.1887 25.4975 25.1537 26.5325 23.8462 27.0375C22.955 27.3675 22.0125 27.5425 21.0613 27.5537C19.48 27.6262 19.005 27.6412 15 27.6412C10.995 27.6412 10.52 27.6262 8.93875 27.5537C7.9875 27.5425 7.045 27.3675 6.15375 27.0375C4.84625 26.5325 3.81125 25.4975 3.30625 24.19C2.97625 23.2987 2.80125 22.3563 2.79 21.405C2.7175 19.8238 2.7025 19.3487 2.7025 15.3438C2.7025 11.3387 2.7175 10.8638 2.79 9.2825C2.80125 8.33125 2.97625 7.38875 3.30625 6.4975C3.81125 5.19 4.84625 4.155 6.15375 3.65C7.045 3.32 7.9875 3.145 8.93875 3.13375C10.52 3.06125 10.995 3.04625 15 3.04625Z" fill="white"/>
+                    </svg>
+                </a>
+    
+                <!-- TikTok -->
+                <a href="#" target="_blank" class="social-icon">
+                    <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M26.3447 7.85402C24.6314 7.85402 23.0472 7.28488 21.7799 6.32849C20.3247 5.23129 19.2745 3.61776 18.9048 1.76366C18.811 1.306 18.764 0.830744 18.7582 0.34375H13.8589V13.7273L13.853 21.0557C13.853 23.0154 12.5739 24.6758 10.8078 25.2626C10.2915 25.4327 9.73996 25.5149 9.16496 25.4797C8.42566 25.4386 7.73918 25.2156 7.13484 24.8577C5.85574 24.095 4.99324 22.7103 4.96977 21.1202C4.93456 18.6442 6.93535 16.6199 9.41139 16.6199C9.89838 16.6199 10.3678 16.7021 10.8078 16.8429V13.1875V11.8791C10.3443 11.8086 9.87491 11.7734 9.39378 11.7734C6.68305 11.7734 4.14833 12.9 2.33531 14.9301C0.968203 16.4615 0.146767 18.4212 0.0176843 20.4748C-0.146603 23.1679 0.839119 25.732 2.75189 27.6213C3.03353 27.897 3.3269 28.1552 3.63787 28.3958C5.27487 29.6573 7.28152 30.3438 9.39378 30.3438C9.86904 30.3438 10.3443 30.3085 10.8078 30.2381C12.7793 29.9448 14.5982 29.0412 16.0357 27.6213C17.8018 25.8787 18.7758 23.561 18.7875 21.0967L18.764 10.1482C19.6031 10.7995 20.5242 11.3334 21.5158 11.75C23.0531 12.4012 24.6842 12.724 26.3564 12.724V9.16831V7.84815C26.3623 7.85402 26.3447 7.85402 26.3447 7.85402Z" fill="white"/>
+                    </svg>
+                </a>
+    
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/hello.thincrs/" target="_blank" class="social-icon">
+                    <svg width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.8689 22.6738L20.9709 15.4894H14.0777V10.8292C14.0777 8.86317 15.0388 6.94569 18.1262 6.94569H21.2621V0.829187C21.2621 0.829187 18.4175 0.34375 15.699 0.34375C10.0243 0.34375 6.31068 3.78064 6.31068 10.0137V15.4894H0V22.6738H6.31068V40.3438H14.0777V22.6738H19.8689Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="copyright">Vamos. All rights reserved. © 2023.</p>
+        </div>
+    </footer>
+
+   
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

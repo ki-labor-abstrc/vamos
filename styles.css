@@ -1,0 +1,2577 @@
+/* 
+  Estilos generales para todos los elementos
+  - Elimina márgenes y rellenos por defecto para asegurar consistencia.
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Estilos para el cuerpo de la página
+  - Define la fuente, el espaciado y el color de fondo del cuerpo.
+*/
+body {
+  font-family: "Nunito Sans", sans-serif !important;
+  /* Fuente principal */
+  line-height: 1.6;
+  /* Espaciado entre líneas para mejor legibilidad */
+  background-color: #ffffff;
+  /* Color de fondo blanco */
+  margin: 0;
+  padding: 0;
+  color: #000000 !important;
+}
+
+/* 
+  Estilos para las secciones
+  - Configura el diseño de las secciones de la página con posicionamiento relativo, alto mínimo y sombra.
+*/
+section {
+  position: relative;
+  /* Permite el uso de posicionamiento absoluto dentro de la sección */
+  padding: 20px;
+  /* Espaciado interno de 20px */
+  display: flex;
+  /* Uso de flexbox para alinear el contenido */
+  justify-content: center;
+  /* Alineación horizontal centrada del contenido */
+  align-items: center;
+  /* Alineación vertical centrada del contenido */
+  background-color: #ffffff;
+  /* Color de fondo blanco */
+  margin-bottom: 20px;
+  /* Espacio debajo de cada sección */
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  Estilos para cada sección específica
+  - Define el color de fondo para varias secciones numeradas del 1 al 9.
+*/
+.first {
+  background-color: white;
+}
+
+/* Color de fondo verde para la primera sección */
+.second {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la segunda sección */
+.third {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la tercera sección */
+.fourth {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la cuarta sección */
+.fifth {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la quinta sección */
+.sixth {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la sexta sección */
+.seventh {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la séptima sección */
+.eighth {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la octava sección */
+.ninth {
+  background-color: white;
+}
+
+/* Color de fondo blanco para la novena sección */
+
+/* 
+  Estilos para la barra de navegación 
+  - Ajusta el espacio entre el texto y el icono del dropdown.
+*/
+/* Estilos generales del navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand img {
+  height: 35px;
+  width: auto;
+}
+
+/* Estilos para el botón hamburguesa */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Estilos para los items del menú */
+.navbar-nav {
+  padding: 1rem 0;
+}
+
+.nav-item {
+  margin: 0.5rem 0;
+}
+
+/* Estilos para los enlaces */
+.preguntas-frecuentes {
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.btn-contacto {
+  background-color: #90fa75;
+  color: #000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+/* Media query para móviles pequeños */
+@media (max-width: 360px) {
+  .navbar {
+      padding: 0.5rem;
+  }
+  
+  .navbar-brand img {
+      height: 30px;
+  }
+  
+  .btn-contacto {
+      margin: 0.5rem auto;
+      display: inline-block;
+      width: auto;
+  }
+  
+  .navbar-collapse {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+}
+
+/* Animación para el menú desplegable */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+/* Media query para móvil medio (375x667) */
+@media (min-width: 361px) and (max-width: 375px) {
+  .navbar {
+      padding: 0.6rem;
+  }
+  
+  .navbar-brand img {
+      height: 30px;
+  }
+  
+  .btn-contacto {
+      margin: 0.5rem auto;
+      padding: 0.45rem 1.3rem;
+      font-size: 0.95rem;
+  }
+  
+  .navbar-collapse {
+      background-color: white;
+      padding: 0.9rem;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .preguntas-frecuentes {
+      font-size: 0.95rem;
+  }
+}
+
+/* Media query para smartphone grande (720x1280) */
+@media (min-width: 376px) and (max-width: 720px) {
+  .navbar {
+      padding: 0.7rem 1rem;
+  }
+  
+  .navbar-brand img {
+      height: 32px;
+  }
+  
+  .btn-contacto {
+      margin: 0.5rem auto;
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+  }
+  
+  .navbar-collapse {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .preguntas-frecuentes {
+      font-size: 1rem;
+  }
+}
+
+/* Estilos comunes para todos los tamaños móviles */
+@media (max-width: 720px) {
+  .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+  }
+
+  .nav-item {
+      text-align: center;
+  }
+
+  .btn-contacto {
+      display: inline-block;
+      width: auto;
+  }
+
+  .navbar-toggler {
+      padding: 0.2rem 0.5rem;
+  }
+
+  /* Mejora en la interacción táctil */
+  .nav-link {
+      padding: 0.8rem 1rem;
+  }
+}
+
+/*******************************************PRIMERA SECCION*******************/
+.first {
+  height: auto !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.first .screen-shot-2023-09-26-at-1439-1-1wMAcK {
+  background-color: transparent;
+  height: 130vh;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  z-index: -1;
+}
+
+.first .vector-1wMAcK {
+  height: 40rem;
+  margin-left: 30rem !important;
+  margin-top: 15%;
+  width: auto;
+}
+
+.first .rectangle-5792-1wMAcK {
+  background-color: transparent;
+  height: 442px;
+  left: 70px;
+  position: absolute;
+  top: 346px;
+  width: 92px;
+}
+
+:root {
+  --n-black: #000000;
+  --screamin-green: #8cfc6d;
+  --white: #ffffff;
+
+  --font-size-l: 25px;
+  --font-size-m: 20px;
+  --font-size-s: 18px;
+  --font-size-xl: 30px;
+  --font-size-xxl: 64px;
+  --font-size-xxxl: 65px;
+  --font-size-xxxxl: 100px;
+
+  --font-family-nunito_sans: "Nunito Sans", Helvetica;
+}
+
+.first .title-1wMAcK {
+  background-color: transparent;
+  color: transparent;
+
+  font-weight: 800;
+  height: auto;
+  left: 206px;
+  letter-spacing: 0px;
+  line-height: 1;
+  position: absolute;
+  text-align: left;
+  top: 417px;
+  width: 698px;
+}
+
+.first .span0-ncxXJd {
+  color: var(--screamin-green);
+  font-size: 5.5rem;
+}
+
+.first .span1-ncxXJd {
+  color: var(--white);
+  font-size: 5.5rem;
+}
+
+.first .invierte-en-lo-ms-po-1wMAcK {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1.7rem;
+  font-weight: 400;
+  height: auto;
+  left: 15%;
+  letter-spacing: -0.9px;
+  line-height: 40px;
+  position: absolute;
+  text-align: left;
+  top: 72%;
+  width: 599px;
+  text-align: start;
+}
+
+/* Media query para móvil pequeño (360x640) */
+@media (max-width: 360px) {
+  .first {
+      height: 90vh !important;
+  }
+
+  .first .screen-shot-2023-09-26-at-1439-1-1wMAcK {
+      height: 100%;
+      top: 0;
+      object-position: center;
+      transform: scale(1.2); /* Ajusta el zoom de la imagen */
+  }
+
+  .first .vector-1wMAcK {
+      height: 15rem;
+      margin-left: 10rem !important;
+      margin-top: -15%;
+  }
+
+  .first .rectangle-5792-1wMAcK {
+      height: 200px;
+      left: 9px;
+      top: 180px;
+      width: 40px;
+  }
+
+  .first .title-1wMAcK {
+      left: 50px;
+      top: 220px;
+      width: 280px;
+  }
+
+  .first .span0-ncxXJd,
+  .first .span1-ncxXJd {
+      font-size: 2.5rem;
+  }
+
+  .first .invierte-en-lo-ms-po-1wMAcK {
+      font-size: 1rem;
+      line-height: 1.6;
+      top: 55%;
+      left: 50px;
+      width: 280px;
+  }
+}
+
+/* Media query para móvil medio (375x667) */
+@media (min-width: 361px) and (max-width: 375px) {
+  .first {
+      height: 90vh !important;
+  }
+
+  .first .screen-shot-2023-09-26-at-1439-1-1wMAcK {
+      height: 100%;
+      top: 0;
+      object-position: center;
+      transform: scale(1.2);
+  }
+
+  .first .vector-1wMAcK {
+      height: 18rem;
+      margin-left: 12rem !important;
+      margin-top: -20%;
+  }
+
+  .first .rectangle-5792-1wMAcK {
+      height: 220px;
+      left: 5px;
+      top: 200px;
+      width: 45px;
+  }
+
+  .first .title-1wMAcK {
+      left: 55px;
+      top: 240px;
+      width: 300px;
+  }
+
+  .first .span0-ncxXJd,
+  .first .span1-ncxXJd {
+      font-size: 2.8rem;
+  }
+
+  .first .invierte-en-lo-ms-po-1wMAcK {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      top: 58%;
+      left: 55px;
+      width: 300px;
+  }
+}
+
+/* Media query para smartphone grande (720x1280) */
+@media (min-width: 376px) and (max-width: 720px) {
+  .first {
+      height: 95vh !important;
+  }
+
+  .first .screen-shot-2023-09-26-at-1439-1-1wMAcK {
+      height: 100%;
+      top: 0;
+      object-position: center;
+      transform: scale(1.1);
+  }
+
+  .first .vector-1wMAcK {
+      height: 25rem;
+      margin-left: 28rem !important;
+      margin-top: -70%;
+  }
+
+  .first .rectangle-5792-1wMAcK {
+      height: 600px;
+      width: 150px !important;
+      left: 10px;
+      top: 350px;
+      width: 60px;
+  }
+
+  .first .title-1wMAcK {
+      left: 200px;
+      top: 500px;
+      width: 400px;
+  }
+
+  .first .span0-ncxXJd,
+  .first .span1-ncxXJd {
+      font-size: 3.5rem;
+  }
+
+  .first .invierte-en-lo-ms-po-1wMAcK {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      top: 60%;
+      left: 200px;
+      width: 350px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/***********************************SEGUNDA SECCION**************************/
+.second {
+  background-color: #ffffff;
+  width: 100%;
+  height: 155vh;
+  position: relative;
+  display: flex;
+  align-items: start;
+  padding: 2rem;
+}
+
+
+.second .content {
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: start;
+}
+
+/* Estilos para la sección izquierda con imagen */
+.second .left-section {
+  position: absolute;
+  /* Cambiar a absolute */
+  width: 50%;
+  /* Mayor prioridad en la superposición */
+  top: 50px;
+  /* Ajustar posición */
+  right: 40px;
+}
+
+.second .left-section img {
+  width: 95%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 2rem;
+
+}
+
+
+/* Estilos para la sección derecha con texto */
+.second .right-section {
+  width: 50%;
+  height: 130vh;
+  padding: 60px;
+  background-color: #4DA0E5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+.second .right-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.second .right-section p {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 500;
+  margin-left: 0;
+  width: 90%;
+}
+
+.second .right-section span {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.second .right-section h6 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: start;
+  margin-top: 50px;
+
+}
+
+.second .vector-G6t8xS {
+  height: 217px;
+  left: 43%;
+  top: 25rem;
+  width: 217px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 720px) {
+  .second {
+      padding: 1rem;
+      margin-top: 0;
+      flex-direction: column;
+      height: auto;
+  }
+
+  .second .content {
+      flex-direction: column;
+      margin-top: 0;
+  }
+
+  /* Contenedor derecho (texto) */
+  .second .right-section {
+      width: 100%;
+      height: auto;
+      padding: 2rem;
+      order: 1;  /* Aparece primero */
+      border-radius: 15px;
+      margin-bottom: 2rem;
+  }
+
+  .second .right-section h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+  }
+
+  .second .right-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      width: 100%;
+  }
+
+  .second .right-section h6 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+  }
+
+  /* Vector */
+  .second .vector-G6t8xS {
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+  }
+
+  /* Contenedor izquierdo (imagen) */
+  .second .left-section {
+      width: 100%;
+      position: relative;
+      order: 2;  /* Aparece segundo */
+      right: 0;
+      top: 0;
+  }
+
+  .second .left-section img {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+  }
+}
+
+/* Ajustes específicos para móvil pequeño (360px) */
+@media (max-width: 360px) {
+  .second .right-section {
+      padding: 1.5rem;
+  }
+
+  .second .right-section h1 {
+      font-size: 1.8rem;
+      margin-top: 20%;
+  }
+
+  .second .right-section p {
+      font-size: 0.9rem;
+  }
+
+  .second .right-section h6 {
+      font-size: 1rem;
+  }
+
+  .second .vector-G6t8xS {
+      height: 80px;
+      width: 80px;
+  }
+}
+
+/* Ajustes para móvil medio (375px) */
+@media (min-width: 361px) and (max-width: 375px) {
+  .second .right-section {
+      padding: 1.7rem;
+  }
+
+  .second .right-section h1 {
+      font-size: 1.9rem;
+      margin-top: 20%;
+  }
+
+  .second .right-section p {
+      font-size: 0.95rem;
+  }
+
+  .second .right-section h6 {
+      font-size: 1.1rem;
+  }
+
+  .second .vector-G6t8xS {
+      height: 90px;
+      width: 90px;
+  }
+}
+
+
+
+/*++++++++++++++++++++++++tercera SECCION++++++++++++++++++++*/
+.fourth {
+  flex-direction: column;
+  padding: 80px 10rem;
+  width: 100%;
+  background-color: #6676D1;
+  height: 130vh;
+  overflow: hidden;
+  justify-content: start;
+  align-items: start;
+}
+
+.fourth .vector-qz4p61 {
+  height: 519px;
+  left: 877px;
+  top: 50px;
+  width: 1156px;
+  position: absolute;
+}
+
+.fourth .qu-es-vamos-1wMAcK {
+  background-color: transparent;
+  color: var(--white);
+
+  font-weight: 800;
+  font-size: 5rem;
+  left: 0;
+  letter-spacing: 0px;
+  line-height: 1;
+  width: 50%;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.fourth .somos-un-fondo-dedic-1wMAcK {
+  background-color: transparent;
+  color: var(--white);
+
+  font-weight: 700;
+  line-height: 36px;
+  width: 55%;
+  text-align: left;
+
+}
+
+.fourth .con-ms-de-27-aos-en-1wMAcK {
+  background-color: transparent;
+  color: var(--white);
+
+  font-weight: 500;
+  line-height: 36px;
+  width: 55%;
+  text-align: left;
+
+}
+/* Media queries para dispositivos móviles */
+@media (max-width: 720px) {
+  .fourth {
+      padding: 3rem 2rem;
+      height: auto;
+  }
+
+  .fourth .vector-qz4p61 {
+      height: auto;
+      width: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0.2; /* Hacemos el vector más sutil */
+  }
+
+  .fourth .qu-es-vamos-1wMAcK {
+      font-size: 2.5rem;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+  }
+
+  .fourth .somos-un-fondo-dedic-1wMAcK {
+      font-size: 1rem;
+      line-height: 1.6;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+  }
+
+  .fourth .con-ms-de-27-aos-en-1wMAcK {
+      font-size: 1rem;
+      line-height: 1.6;
+      width: 100%;
+      text-align: left;
+      position: relative;
+      z-index: 2;
+  }
+}
+
+/* Ajustes específicos para móvil pequeño (360px) */
+@media (max-width: 360px) {
+  .fourth {
+      padding: 2rem 1.5rem;
+  }
+
+  .fourth .qu-es-vamos-1wMAcK {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .fourth .somos-un-fondo-dedic-1wMAcK,
+  .fourth .con-ms-de-27-aos-en-1wMAcK {
+      font-size: 0.9rem;
+      line-height: 1.5;
+  }
+}
+
+/* Ajustes para móvil medio (375px) */
+@media (min-width: 361px) and (max-width: 375px) {
+  .fourth {
+      padding: 2.5rem 1.7rem;
+  }
+
+  .fourth .qu-es-vamos-1wMAcK {
+      font-size: 2.2rem;
+      margin-bottom: 1.7rem;
+  }
+
+  .fourth .somos-un-fondo-dedic-1wMAcK,
+  .fourth .con-ms-de-27-aos-en-1wMAcK {
+      font-size: 0.95rem;
+      line-height: 1.55;
+  }
+}
+
+/* Ajustes para el vector en todos los tamaños móviles */
+@media (max-width: 720px) {
+  .fourth .vector-qz4p61 {
+      position: absolute;
+      width: 150%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.1;
+      z-index: 1;
+  }
+}
+
+/*******************CUARTA SECCION**************************************/
+
+/* 
+Estilos generales para la sección "fifth":
+- Se establece un contenedor de flexbox que centra su contenido tanto horizontal como verticalmente.
+- Se ajusta el alto para ocupar toda la pantalla del viewport (100vh).
+- El texto dentro de los elementos hijos se centrará.
+*/
+.fifth {
+
+  margin: 0;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-bottom: 5rem;
+  width: 100%;
+  height: auto;
+  /* Centra el texto en los elementos hijos */
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.fifth .image-section {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  z-index: 1;
+}
+
+.fifth .image-section,
+.fifth .text-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.fifth .image-section img {
+  width: 100%;
+  height: auto;
+}
+
+.fifth strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.fifth .text-section {
+  padding: 20px;
+  margin-top: 1rem;
+}
+
+.fifth .vector {
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 1;
+  mix-blend-mode: multiply;
+  /* Mezclar con el fondo */
+  top: 25%;
+  left: -30%;
+}
+
+.fifth .text-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.fifth .text-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fifth .text-section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.fifth .text-section li img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.fifth .text-section li p {
+  margin: 0;
+  font-size: 1.1rem;
+  width: 70%;
+}
+
+/* 
+Media Queries para pantallas pequeñas:
+- Ajusta el diseño y las fuentes para una mejor visualización en pantallas con un ancho máximo de 768px.
+*/
+@media (max-width: 768px) {
+  .fifth h1 {
+    font-size: 2rem;
+    margin-top: 15% !important;
+    margin-bottom: 0;
+  }
+
+  .fifth p.subtitle {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .fifth .grid {
+    grid-template-columns: 1fr;
+    /* Cambia a una sola columna */
+  }
+
+  .fifth .card {
+    padding: 15px;
+    max-height: 110px;
+  }
+
+  .fifth .card-icon img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .fifth .card-title {
+    margin-top: -3%;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .fifth .card-description {
+    font-size: .8rem;
+    width: 90%;
+  }
+
+  .fifth .card-description,
+  .fifth .card-title {
+    margin-left: 8%;
+  }
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 720px) {
+  .fifth {
+      flex-direction: column;
+      padding: 3rem 1.5rem;
+  }
+
+  /* Ajuste del vector decorativo */
+  .fifth .vector {
+      display: none; /* Ocultamos el vector en móvil para simplicidad */
+  }
+
+  /* Contenedor de imagen */
+  .fifth .image-section {
+      width: 100%;
+      margin: 0;
+      order: 1; /* La imagen aparece primero */
+      margin-bottom: 2rem;
+  }
+
+  .fifth .image-section img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 15px;
+  }
+
+  /* Sección de texto */
+  .fifth .text-section {
+      width: 100%;
+      padding: 0;
+      order: 2; /* El texto aparece después */
+  }
+
+  .fifth .text-section h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+  }
+
+  /* Estilos de la lista */
+  .fifth .text-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .fifth .text-section li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      gap: 1rem;
+  }
+
+  .fifth .text-section li img {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+  }
+
+  .fifth .text-section li p {
+      margin: 0;
+      font-size: 0.9rem;
+      width: 100%;
+  }
+
+  .fifth .text-section li strong {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 0.5rem;
+  }
+}
+
+/* Ajustes específicos para móvil pequeño (360px) */
+@media (max-width: 360px) {
+  .fifth {
+      padding: 2rem 1rem;
+  }
+
+  .fifth .text-section h1 {
+      font-size: 1.8rem;
+  }
+
+  .fifth .text-section li img {
+      width: 35px;
+      height: 35px;
+  }
+
+  .fifth .text-section li p {
+      font-size: 0.85rem;
+  }
+
+  .fifth .text-section li strong {
+      font-size: 1rem;
+  }
+
+  .fifth .image-section img {
+      max-height: 300px;
+  }
+}
+
+/* Ajustes para móvil medio (375px) */
+@media (min-width: 361px) and (max-width: 375px) {
+  .fifth {
+      padding: 2.5rem 1.2rem;
+  }
+
+  .fifth .text-section h1 {
+      font-size: 1.9rem;
+  }
+
+  .fifth .text-section li img {
+      width: 37px;
+      height: 37px;
+  }
+
+  .fifth .text-section li p {
+      font-size: 0.87rem;
+  }
+
+  .fifth .text-section li strong {
+      font-size: 1.05rem;
+  }
+
+  .fifth .image-section img {
+      max-height: 350px;
+  }
+}
+
+
+/******************SECCION CATORCE***********************/
+
+.nunitosans-extra-bold-black-25px {
+  color: var(--n-black);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.nunitosans-semi-bold-black-20px {
+  color: var(--n-black);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.nunitosans-extra-bold-black-65px {
+  color: var(--n-black);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.nunitosans-medium-black-18px {
+  color: var(--n-black);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.nunitosans-medium-white-18px {
+  color: var(--white);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.nunitosans-extra-bold-white-65px {
+  color: var(--white);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.nunitosans-extra-bold-black-100px {
+  color: var(--n-black);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.nunitosans-bold-screamin-green-20px {
+  color: var(--screamin-green);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.nunitosans-semi-bold-black-18px {
+  color: var(--n-black);
+  font-family: var(--font-family-nunito_sans);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.fourteenth {
+  padding: 5vh 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+  background-color: var(--white);
+  height: 130vh;
+  /* Cambiado a viewport height */
+  overflow-x: hidden;
+}
+
+.fourteenth .co-invertimos-en-pro-1wMAcK {
+  background-color: transparent;
+  height: auto;
+  left: 12vw;
+  /* Convertido a viewport width */
+  letter-spacing: 0;
+  line-height: 4.5rem;
+  position: absolute;
+  text-align: left;
+  top: 10%;
+  width: 80%;
+}
+
+.fourteenth .impulsamos-y-vincula-1wMAcK {
+  background-color: transparent;
+  height: auto;
+  left: 12vw;
+  letter-spacing: -0.04em;
+  line-height: 2.25rem;
+  position: absolute;
+  text-align: left;
+  top: 30%;
+  width: 40vw;
+}
+
+.fourteenth .rectangle-5794-1wMAcK,
+.fourteenth .rectangle-5795-1wMAcK,
+.fourteenth .rectangle-5796-1wMAcK {
+  background-color: transparent;
+  height: 45%;
+  position: absolute;
+  top: 55vh;
+  width: 6vw;
+}
+
+.fourteenth .rectangle-5794-1wMAcK {
+  left: 12vw;
+}
+
+.fourteenth .rectangle-5795-1wMAcK {
+  left: 37vw;
+}
+
+.fourteenth .rectangle-5796-1wMAcK {
+  left: 62vw;
+}
+
+/* Estilos comunes para los números */
+.fourteenth [class^="x"] {
+  background-color: transparent;
+  font-family: var(--font-family-nunito_sans);
+  font-size: clamp(2rem, 4vw, 4rem);
+  /* Tamaño de fuente responsive */
+  font-style: normal;
+  font-weight: 800;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 1.5;
+  position: absolute;
+  text-align: left;
+  top: 55%;
+  white-space: nowrap;
+  width: auto;
+}
+
+.fourteenth .x1-1wMAcK,
+.fourteenth .x2-1wMAcK,
+.fourteenth .x3-1wMAcK {
+  font-size: 6rem;
+}
+
+.fourteenth .x1-1wMAcK {
+  color: var(--screamin-green);
+  left: 19vw;
+}
+
+.fourteenth .x2-1wMAcK {
+  color: #6676d1;
+  left: 45vw;
+}
+
+.fourteenth .x3-1wMAcK {
+  color: #4da0e5;
+  left: 71vw;
+}
+
+/* Estilos comunes para los iconos */
+.fourteenth [class^="icon-"],
+.fourteenth .group-39815-1wMAcK {
+  background-color: transparent;
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  top: 60%;
+}
+
+.fourteenth .group-39815-1wMAcK {
+  left: 13vw;
+}
+
+.fourteenth .icon-identification-1wMAcK {
+  left: 38vw;
+}
+
+.fourteenth .icon-star-1wMAcK {
+  left: 63vw;
+}
+
+/* Estilos comunes para los textos descriptivos */
+.fourteenth [class*="seleccin"],
+.fourteenth [class*="vinculacin"],
+.fourteenth [class*="bootcamps"] {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: -0.04em;
+  line-height: 2.25rem;
+  position: absolute;
+  text-align: left;
+  top: 70%;
+  width: 15vw;
+}
+
+.fourteenth .seleccin-de-candidat-1wMAcK {
+  left: 19vw;
+}
+
+.fourteenth .vinculacin-con-traba-1wMAcK {
+  left: 45vw;
+}
+
+.fourteenth .bootcamps-de-especia-1wMAcK {
+  left: 71vw;
+}
+
+/* Media queries para tablets */
+@media (max-width: 1024px) {
+  .fourteenth h1 {
+    font-size: 3rem;
+  }
+
+  .fourteenth .process-container {
+    gap: 20px;
+  }
+
+  .fourteenth .process-item {
+    padding: 15px;
+  }
+
+  .fourteenth .text {
+    font-size: 1rem;
+  }
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .fourteenth {
+    padding: 40px 0;
+  }
+
+  .fourteenth h1 {
+    font-size: 2.5rem;
+  }
+
+  .fourteenth .process-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .fourteenth .process-item {
+    max-width: 100%;
+  }
+
+  .fourteenth .number-line {
+    min-height: 100px;
+  }
+
+  .fourteenth .icon-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .fourteenth h6 {
+    font-size: 1.2rem;
+  }
+}
+
+/******************SECCION QUINCE***********************/
+fifteenth {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.fifteenth .title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000000;
+  text-align: start;
+  line-height: 1.2;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.fifteenth .contenedor {
+  background-color: #8cfc6d;
+  justify-content: center;
+  align-items: center;
+
+  height: auto;
+  border-radius: 100px;
+  padding: 5%;
+}
+
+.fifteenth .flow-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin-top: 3rem;
+  
+
+}
+
+.fifteenth .flow-chart div {
+  padding: 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+
+.fifteenth .box1 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+  height: 65vh;
+  font-size: 1.1rem !important;
+
+}
+
+.fifteenth .box1 span {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.fifteenth .box2,
+.box3 {
+  background-color: #000000;
+  color: #8cfc6d !important;
+  line-height: 2;
+  font-size: 1.1rem !important;
+  border-radius: 35px !important;
+  padding: 2rem !important;
+  height: auto;
+  width: 100%;
+  font-weight: 750 !important;
+}
+
+.fifteenth .icon2 {
+  float: right;
+
+}
+
+
+.fifteenth .icon3 {
+  transform: rotate(90deg);
+}
+
+/* Media queries para la sección fifteenth */
+@media (max-width: 720px) {
+  .fifteenth {
+      padding: 2rem;
+  }
+
+  .fifteenth .title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 0;
+  }
+
+  .fifteenth .contenedor {
+      border-radius: 50px;
+      padding: 2rem;
+  }
+
+  .fifteenth .flow-chart {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .fifteenth .box1 {
+      height: auto;
+      text-align: center;
+  }
+
+  .fifteenth .box1 span {
+      font-size: 2.5rem;
+  }
+
+  .fifteenth .box2,
+  .fifteenth .box3 {
+      width: auto;
+      padding: 1.5rem !important;
+      text-align: center;
+  }
+
+  .fifteenth .icon2 {
+      display: none;
+  }
+
+  .fifteenth .icon3 {
+      display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .fifteenth {
+      padding: 1.5rem;
+  }
+
+  .fifteenth .title {
+      font-size: 2rem;
+  }
+
+  .fifteenth .contenedor {
+      border-radius: 30px;
+      padding: 1.5rem;
+  }
+
+  .fifteenth .flow-chart div {
+      font-size: 1rem !important;
+  }
+
+  .fifteenth .box1 span {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .fifteenth {
+      padding: 1rem;
+  }
+
+  .fifteenth .title {
+      font-size: 1.8rem;
+  }
+
+  .fifteenth .contenedor {
+      border-radius: 25px;
+      padding: 1rem;
+  }
+
+  .fifteenth .flow-chart div {
+      font-size: 0.9rem !important;
+      padding: 15px;
+  }
+
+  .fifteenth .box1 span {
+      font-size: 1.8rem;
+  }
+}
+
+/******************SECCION DIECISEIS***********************/
+.sixteenth {
+  padding:  0;
+  background-color: #ffffff;
+  overflow: hidden;
+  height: auto;
+}
+
+.sixteenth .container {
+  max-width: 1200px;
+  margin: 0 ;
+  position: relative;
+}
+
+/* Contenedor de la imagen y línea */
+
+
+
+.sixteenth img {
+  object-fit: contain;
+  margin-left: 5% ;
+}
+
+/* Contenedor del texto */
+.sixteenth .text-container {
+  position: relative;
+  width: 100%;
+  background-color: #6676D1;
+  padding: 70px ;
+right: 10%;  
+margin-top: 70px;
+  color: #ffffff;
+  z-index: 2;
+  border-radius: 90px;
+}
+
+.sixteenth h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.sixteenth p {
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 0;
+  width: 100%;
+}
+
+
+@media (max-width: 720px) {
+  .sixteenth {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .sixteenth .container {
+      order: 1;
+      margin: 0;
+      width: 100%;
+  }
+
+  .sixteenth img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      object-fit: cover;
+  }
+
+  .sixteenth .text-container {
+      order: 2;
+      width: 90%;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 25px;
+  }
+
+  .sixteenth h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+
+  .sixteenth p {
+      font-size: 1rem;
+      line-height: 1.6;
+  }
+}
+
+@media (max-width: 375px) {
+  .sixteenth .text-container {
+      padding: 1.5rem;
+      width: 85%;
+  }
+
+  .sixteenth h1 {
+      font-size: 1.8rem;
+  }
+
+  .sixteenth p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .sixteenth .text-container {
+      padding: 1.2rem;
+  }
+
+  .sixteenth h1 {
+      font-size: 1.6rem;
+  }
+
+  .sixteenth p {
+      font-size: 0.85rem;
+  }
+}
+
+/******************SECCION DIECISIETE***********************/
+.seventeenth {
+  padding: 80px 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.seventeenth  img {
+  object-fit: contain;
+  margin-left: 5% ;
+}
+
+/* Contenedor del texto */
+.seventeenth .text-container {
+  position: relative;
+  width: 47rem;
+  background-color: #8cfc6d;
+  /* Contenedor cian */
+  padding: 70px;
+  margin-top: 100px;
+  color: #000000;
+  z-index: 2;
+  border-radius: 90px;
+  left: 10%;
+}
+
+.seventeenth h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.seventeenth p {
+  font-size: 1.1rem;
+  line-height: 2;
+  font-weight: 500;
+  margin-left: 0;
+}
+
+@media (max-width: 720px) {
+  .seventeenth {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+  }
+
+  .seventeenth img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      object-fit: cover;
+      order: 1;
+  }
+
+  .seventeenth .text-container {
+      width: 90%;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 25px;
+      order: 2;
+      left: 0;
+  }
+
+  .seventeenth h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+
+  .seventeenth p {
+      font-size: 1rem;
+      line-height: 1.6;
+  }
+}
+
+@media (max-width: 375px) {
+  .seventeenth .text-container {
+      width: 85%;
+      padding: 1.5rem;
+  }
+
+  .seventeenth h1 {
+      font-size: 1.8rem;
+  }
+
+  .seventeenth p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .seventeenth .text-container {
+      padding: 1.2rem;
+  }
+
+  .seventeenth h1 {
+      font-size: 1.6rem;
+  }
+
+  .seventeenth p {
+      font-size: 0.85rem;
+  }
+}
+/******************SECCION DIECIOCHO***********************/
+.eighteenth {
+  padding: 80px 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+
+.eighteenth img {
+  object-fit: contain;
+  margin-left: 5%;
+}
+
+/* Contenedor del texto */
+.eighteenth .text-container {
+  position: relative;
+  background-color: #4DA0E5;
+  width: 47rem;
+  /* Contenedor cian */
+  padding: 70px;
+  margin-top: 100px;
+  color: #ffffff;
+  z-index: 2;
+  border-radius: 90px;
+  right: 10%;
+}
+
+.eighteenth h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.eighteenth p {
+  font-size: 1.1rem;
+  line-height: 2;
+  font-weight: 500;
+  margin-left: 0;
+}
+
+@media (max-width: 720px) {
+  .eighteenth {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0;
+  }
+
+  .eighteenth img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      object-fit: cover;
+      order: 1;
+  }
+
+  .eighteenth .text-container {
+      width: 90%;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 25px;
+      order: 2;
+      right: 0;
+  }
+
+  .eighteenth h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+  }
+
+  .eighteenth p {
+      font-size: 1rem;
+      line-height: 1.6;
+  }
+}
+
+@media (max-width: 375px) {
+  .eighteenth .text-container {
+      width: 85%;
+      padding: 1.5rem;
+  }
+
+  .eighteenth h1 {
+      font-size: 1.8rem;
+  }
+
+  .eighteenth p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .eighteenth .text-container {
+      padding: 1.2rem;
+  }
+
+  .eighteenth h1 {
+      font-size: 1.6rem;
+  }
+
+  .eighteenth p {
+      font-size: 0.85rem;
+  }
+}
+
+/******************SECCION DIECINUEVE***********************/
+.nineteenth {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.nineteenth .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+/* Contenedor para los textos */
+.nineteenth .text-container {
+  margin-bottom: 50px;
+}
+
+/* Estilos para el h3 con efecto highlight */
+.nineteenth h3 {
+  font-size: 1.1rem;
+  line-height: 2;
+  margin-bottom: 40px;
+  color: #000000;
+  font-weight: 500;
+  width: 45rem;
+}
+
+/* Efecto highlight para el span dentro del h3 */
+
+
+/* Estilos para el h1 */
+.nineteenth h1 {
+  font-size: 5.8rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.nineteenth h1 span {
+  font-weight: 800;
+}
+
+
+.nineteenth .vector-a1{
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: auto;
+  z-index: -1;
+  position: absolute;
+}
+
+.nineteenth .vector-a2{
+  top: 10%;
+  left: 5%;
+  height: auto;
+  z-index: 1;
+  position: absolute;
+}
+
+@media (max-width: 720px) {
+  .nineteenth {
+      padding: 2rem 1.5rem;
+      overflow: hidden;
+      position: relative;
+  }
+
+  .nineteenth .vector-a1 {
+      top: 50%;
+      right: -50%;
+      width: 100%;
+      transform: translateY(-50%);
+      opacity: 0.9;
+  }
+
+  .nineteenth .vector-a2 {
+      width: 10%; /* Rectangle más delgado */
+      height: auto;
+      top: 2%;
+      left: 2%;
+  }
+
+  .nineteenth .container {
+      width: 100%;
+      padding: 0;
+  }
+
+  .nineteenth .text-container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+  }
+
+  .nineteenth h1 {
+      font-size: 2.5rem;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      padding-right: 0;
+      text-align: left;
+      width: 90%;
+  }
+
+  .nineteenth h3 {
+      font-size: 1rem;
+      line-height: 1.6;
+      width: 85%;
+      text-align: left;
+      margin-top: 1.5rem;
+  }
+
+  .nineteenth h1 span,
+  .nineteenth h3 span {
+      display: inline; /* Permite que el texto fluya naturalmente */
+  }
+}
+
+@media (max-width: 375px) {
+  .nineteenth h1 {
+      font-size: 2.2rem;
+      width: 95%;
+  }
+
+  .nineteenth h3 {
+      font-size: 0.95rem;
+      width: 90%;
+  }
+
+  .nineteenth .vector-a2 {
+      width: 25%;
+  }
+}
+
+@media (max-width: 360px) {
+  .nineteenth h1 {
+      font-size: 2rem;
+  }
+
+  .nineteenth h3 {
+      font-size: 0.9rem;
+  }
+
+  .nineteenth .vector-a2 {
+      width: 20%;
+  }
+}
+
+/*******************************************SECCION VEINTE*******************/
+.twentieth {
+  height: 130vh;
+  background-color: #4DA0E5;
+}
+
+
+/* Estilos para la columna de texto */
+.twentieth .text-column {
+  width: 100%;
+  padding: 10%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  order: 1;
+  
+  /* Asegura que el texto esté a la izquierda */
+}
+
+
+
+.twentieth img {
+  position: absolute;
+  object-fit: cover;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+/* Estilos para el título (h1) en la columna de texto */
+.twentieth .text-column h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  width: 82%;
+  color: #ffffff;
+  font-weight: 800;
+  margin-top: 10%;
+}
+
+/* Estilos para el párrafo (p) en la columna de texto */
+.twentieth .text-column h6 {
+  font-size: 1.1rem ;
+  width: 80%;
+  line-height: 2;
+
+  font-weight: 600;
+}
+
+.twentieth .text-column a {
+  font-size: 1.1rem;
+  margin-bottom: 4%;
+  color: #ffffff;
+  line-height: 2;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* Estilos para el botón de aplicar dentro de la columna de texto */
+.twentieth .text-column .btnaplicar {
+  padding: 4%;
+  font-size: 1.5rem !important;
+  background-color: #060606;
+  color: #8cfc6d;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 65%;
+  font-weight: 600;
+}
+
+
+@media (max-width: 720px) {
+  .twentieth {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .twentieth img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      right: 0;
+      order: 1;
+  }
+
+  .twentieth .text-column {
+      width: 100%;
+      padding: 2rem;
+      order: 2;
+      margin-top: 0;
+  }
+
+  .twentieth .text-column h1 {
+      font-size: 2.2rem;
+      margin: 1rem 0;
+      width: 100%;
+  }
+
+  .twentieth .text-column h6 {
+      font-size: 1rem;
+      width: 100%;
+  }
+
+  .twentieth .text-column a {
+      font-size: 1rem;
+      margin: 1rem 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .twentieth .text-column {
+      padding: 1.5rem;
+  }
+
+  .twentieth .text-column h1 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .twentieth .text-column {
+      padding: 1.2rem;
+  }
+
+  .twentieth .text-column h1 {
+      font-size: 1.8rem;
+  }
+}
+
+
+
+/********************SECCION INVERSION INTELIGETNE**********************/
+.inversionin {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inversionin .vector-7 {
+  position: absolute;
+  mix-blend-mode: multiply;
+
+}
+
+.inversionin .title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #000000;
+  text-align: start;
+  margin-right: 30rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.inversionin .highlight {
+  color: #000000;
+}
+
+.inversionin .stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.inversionin .stat {
+  display: flex;
+  margin: 0 3rem;
+  text-align: center;
+}
+
+.inversionin .stat img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.inversionin .text {
+  margin-left: 1rem;
+}
+
+.inversionin .stat .value {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.inversionin .stat .description {
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: start;
+  font-weight: 600;
+  margin-top: -15%;
+}
+
+/* Estilos base de la sección inversionin */
+.inversionin {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 720px) {
+  .inversionin {
+      padding: 3rem 1.5rem;
+  }
+
+  .inversionin .vector-7 {
+      position: absolute;
+      transform: rotate(90deg); /* Rotamos el vector verticalmente */
+      width: 90%;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 10;
+      z-index: 1;
+  }
+
+  .inversionin .title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #000000;
+      text-align: center;
+      line-height: 1.2;
+      margin: 1rem 0 2rem 0;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      margin-right: 0;
+  }
+
+  .inversionin .stats {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+  }
+
+  .inversionin .stat {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      width: 100%;
+  }
+
+  .inversionin .text {
+      margin-left: 1.5rem;
+      text-align: left;
+  }
+
+  .inversionin .stat .value {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #000000;
+      text-align: left;
+  }
+
+  .inversionin .stat .description {
+      font-size: 1rem;
+      color: #000000;
+      text-align: left;
+      font-weight: 600;
+      margin-top: 0;
+  }
+}
+
+/* Ajustes específicos para móvil pequeño (360px) */
+@media (max-width: 360px) {
+  .inversionin .title {
+      font-size: 1.8rem;
+  }
+
+  .inversionin .stat .value {
+      font-size: 3rem;
+  }
+
+  .inversionin .stat .description {
+      font-size: 0.9rem;
+  }
+}
+
+/* Ajustes para móvil medio (375px) */
+@media (min-width: 361px) and (max-width: 375px) {
+  .inversionin .title {
+      font-size: 2rem;
+  }
+
+  .inversionin .stat .value {
+      font-size: 3.2rem;
+  }
+
+  .inversionin .stat .description {
+      font-size: 0.95rem;
+  }
+}
+
+/* Ajustes para controlador la altura en móviles */
+@media (max-height: 700px) {
+  .inversionin {
+      min-height: auto;
+      padding: 2rem 1.5rem;
+  }
+  
+  .inversionin .stats {
+      gap: 1.5rem;
+  }
+}
+/* ----------------------------------FOOTER ------------------------------------------*/
+
+
+/* Estilos generales del footer */
+.new-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 6rem;
+  background: #F3F3F3;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* Estilos contenedor izquierdo */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-right: 0;
+  margin-left: 10%;
+}
+
+.footer-logo {
+  width: 200px;
+  height: auto;
+}
+
+.footer-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.footer-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #050505;
+  margin-top: -3rem;
+}
+
+/* Estilos contenedor derecho */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-right: 10%;
+}
+
+/* Estilos para los iconos sociales */
+.social-logos {
+  display: flex;
+  gap: 2rem;
+  align-items: left;
+}
+
+.social-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #000000;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.social-icon svg {
+  width: 25px;
+  /* Ajustado para mantener proporción similar a tus iconos originales */
+  height: auto;
+}
+
+.copyright {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 720px) {
+  .new-footer {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem;
+      gap: 2rem;
+  }
+
+  .footer-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      gap: 1.5rem;
+  }
+
+  .footer-logo {
+      width: 150px;
+      margin: 0 auto;
+  }
+
+  .footer-paragraph {
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+  }
+
+  .footer-title {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+      margin-top: -1rem;
+  }
+
+  .footer-right {
+      align-items: center;
+      margin: 0;
+  }
+
+  .social-logos {
+      gap: 1rem;
+      justify-content: center;
+  }
+
+  .social-icon {
+      width: 40px;
+      height: 40px;
+  }
+
+  .copyright {
+      text-align: center;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .new-footer {
+      padding: 1.5rem;
+  }
+
+  .footer-title {
+      font-size: 1.8rem;
+  }
+
+  .footer-paragraph {
+      font-size: 0.9rem;
+  }
+
+  .social-icon {
+      width: 35px;
+      height: 35px;
+  }
+}
+
+@media (max-width: 360px) {
+  .new-footer {
+      padding: 1.2rem;
+  }
+
+  .footer-title {
+      font-size: 1.6rem;
+  }
+
+  .footer-paragraph {
+      font-size: 0.85rem;
+  }
+
+  .social-icon {
+      width: 32px;
+      height: 32px;
+  }
+}

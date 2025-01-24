@@ -1,0 +1,329 @@
+/* Estilos para la barra de navegación */
+nav .aplicar {
+    padding-right: 3rem;
+}
+
+nav .collapse {
+    padding-left: 5rem !important;
+}
+
+
+/* ----------------------------------SECCION 1 ------------------------------------------*/
+
+/* Estilos base del formulario */
+.contact-form {
+    padding: 8rem 0 4rem 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #8cfc6d;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form .container {
+    max-width: 600px;
+    margin-left: 10rem;
+}
+
+.contact-form h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Elementos del formulario */
+.custom-input, .custom-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 3px solid #000000;
+    font-size: 1rem;
+}
+
+.custom-input {
+    border-radius: 50px;
+}
+
+.custom-textarea {
+    border-radius: 25px;
+    resize: vertical;
+}
+
+/* Estilos de los radio buttons */
+.check-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Smartphone grande (720x1280) */
+@media (max-width: 720px) {
+    .contact-form {
+        padding: 6rem 1rem 3rem;
+    }
+    
+    .contact-form .container {
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    
+    .contact-form h1 {
+        font-size: 2.2rem;
+    }
+    
+    .check-container {
+        gap: 1.5rem;
+    }
+    
+    .btn-enviar {
+        width: 100%;
+    }
+}
+
+/* Móvil medio (375x667) */
+@media (max-width: 375px) {
+    .contact-form {
+        padding: 5rem 0.5rem 2rem;
+    }
+    
+    .contact-form .container {
+        padding: 0 1rem;
+    }
+    
+    .contact-form h1 {
+        font-size: 2rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .custom-input, .custom-textarea {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .check-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Móvil pequeño (360x640) */
+@media (max-width: 360px) {
+    .contact-form h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form p {
+        font-size: 0.9rem;
+    }
+    
+    .custom-input, .custom-textarea {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+        border-width: 2px;
+    }
+    
+    .btn-enviar {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+}
+
+/* Footer responsivo */
+@media (max-width: 720px) {
+    .new-footer {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    
+    .footer-left, .footer-right {
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-title {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* ----------------------------------FOOTER ------------------------------------------*/
+
+
+/* Estilos generales del footer */
+.new-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 6rem;
+    background: #F3F3F3;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  /* Estilos contenedor izquierdo */
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 0;
+    margin-left: 10%;
+  }
+  
+  .footer-logo {
+    width: 200px;
+    height: auto;
+  }
+  
+  .footer-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .footer-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #050505;
+    margin-top: -3rem;
+  }
+  
+  /* Estilos contenedor derecho */
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-right: 10%;
+  }
+  
+  /* Estilos para los iconos sociales */
+  .social-logos {
+    display: flex;
+    gap: 2rem;
+    align-items: left;
+  }
+  
+  .social-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-icon svg {
+    width: 25px;
+    /* Ajustado para mantener proporción similar a tus iconos originales */
+    height: auto;
+  }
+  
+  .copyright {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  @media (max-width: 720px) {
+    .new-footer {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+  
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 1.5rem;
+    }
+  
+    .footer-logo {
+        width: 150px;
+        margin: 0 auto;
+    }
+  
+    .footer-paragraph {
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+  
+    .footer-title {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        margin-top: -1rem;
+    }
+  
+    .footer-right {
+        align-items: center;
+        margin: 0;
+    }
+  
+    .social-logos {
+        gap: 1rem;
+        justify-content: center;
+    }
+  
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+  
+    .copyright {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .new-footer {
+        padding: 1.5rem;
+    }
+  
+    .footer-title {
+        font-size: 1.8rem;
+    }
+  
+    .footer-paragraph {
+        font-size: 0.9rem;
+    }
+  
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .new-footer {
+        padding: 1.2rem;
+    }
+  
+    .footer-title {
+        font-size: 1.6rem;
+    }
+  
+    .footer-paragraph {
+        font-size: 0.85rem;
+    }
+  
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+  }

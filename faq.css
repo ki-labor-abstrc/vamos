@@ -1,0 +1,480 @@
+/* Estilos para la barra de navegación */
+nav .aplicar {
+    padding-right: 3rem;
+}
+
+nav .collapse {
+    padding-left: 5rem !important;
+}
+
+/* Estilos para el botón de aplicar */
+.btn-aplicar {
+    background-color: #90fa75;
+    color: black;
+    padding: 16px 40px;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar img {
+        height: auto;
+        width: 7rem !important;
+    }
+}
+
+
+
+
+/* Estilos base primera sección FAQ */
+.seccion.uno_f {
+    margin-top: 120px;
+    padding: 2rem 0;
+    font-family: 'Nunito Sans', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion.uno_f h1 {
+    font-size: 100px;
+    line-height: 1.2;
+}
+
+.seccion.uno_f p {
+    font-size: 30px;
+    line-height: 1.4;
+}
+
+.rectangle-5792 {
+    position: absolute;
+    rotate: 90deg;
+    width: 100%;
+    height: 50%;
+    background: #6676D1;
+    border-radius: 89px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    left: -20%;
+    top: 50%;
+}
+
+.vector-right {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: -50px;
+    top: 20%;
+    transform: rotate(360deg);
+}
+
+/* Smartphone grande (720x1280) */
+@media (max-width: 720px) {
+    .seccion.uno_f h1 {
+        font-size: 3.5rem;
+        margin-top: 2rem;
+    }
+    
+    .seccion.uno_f p {
+        font-size: 1.2rem;
+    }
+    
+    .rectangle-5792 {
+        width: 70%;
+        height: 40%;
+        left: -30%;
+    }
+    
+    .vector-right {
+        width: 200px;
+        height: 200px;
+        right: -100px;
+        top: 30%;
+    }
+}
+
+/* Móvil medio (375x667) */
+@media (max-width: 375px) {
+    .seccion.uno_f h1 {
+        font-size: 2.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .seccion.uno_f p {
+        font-size: 1rem;
+    }
+    
+    .rectangle-5792 {
+        width: 60%;
+        height: 30%;
+        left: -35%;
+    }
+    
+    .vector-right {
+        width: 150px;
+        height: 150px;
+        right: -80px;
+    }
+}
+
+/* Móvil pequeño (360x640) */
+@media (max-width: 360px) {
+    .seccion.uno_f h1 {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+    
+    .seccion.uno_f p {
+        font-size: 0.9rem;
+    }
+    
+    .rectangle-5792 {
+        width: 50%;
+        height: 25%;
+        left: -40%;
+    }
+    
+    .vector-right {
+        width: 120px;
+        height: 120px;
+        right: -60%;
+    }
+    
+    .content-wrapper {
+        padding: 0 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* Estilos para la sección FAQ */
+.seccion.dos_f {
+    margin-top: 8rem;
+    padding: 2rem 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.seccion.dos_f .container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos para títulos principales */
+.main-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 4rem 0 2rem;
+    color: #000;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.main-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 80%;
+    background-color: #6676D1;
+    border-radius: 2px;
+}
+
+/* Estilos para subtítulos de sección */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2.5rem 0 1.5rem;
+    color: #666;
+    padding-left: 1rem;
+    border-left: 3px solid #90fa75;
+}
+
+/* Estilos del acordeón */
+.accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.accordion-button {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    background-color: #fff;
+    border-radius: 8px !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+    color: #000;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,0.1);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Personalización del ícono */
+.accordion-button::after {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-size: 1.25rem;
+}
+
+/* Estilos para listas dentro del acordeón */
+.accordion-body ul {
+    padding-left: 1.2rem;
+    margin-top: 0.8rem;
+    list-style-type: none;
+}
+
+.accordion-body li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.accordion-body li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #6676D1;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .accordion-button {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .accordion-body {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .seccion.dos_f {
+        margin-top: 6rem;
+        padding: 1rem;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+        margin: 2rem 0 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+        margin: 1.5rem 0 1rem;
+    }
+    
+    .accordion-body li {
+        padding-left: 1.2rem;
+    }
+}
+
+/* ----------------------------------FOOTER ------------------------------------------*/
+
+
+/* Estilos generales del footer */
+.new-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 6rem;
+    background: #F3F3F3;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  
+  /* Estilos contenedor izquierdo */
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 0;
+    margin-left: 10%;
+  }
+  
+  .footer-logo {
+    width: 200px;
+    height: auto;
+  }
+  
+  .footer-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .footer-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #050505;
+    margin-top: -3rem;
+  }
+  
+  /* Estilos contenedor derecho */
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-right: 10%;
+  }
+  
+  /* Estilos para los iconos sociales */
+  .social-logos {
+    display: flex;
+    gap: 2rem;
+    align-items: left;
+  }
+  
+  .social-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-icon svg {
+    width: 25px;
+    /* Ajustado para mantener proporción similar a tus iconos originales */
+    height: auto;
+  }
+  
+  .copyright {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  @media (max-width: 720px) {
+    .new-footer {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+    }
+  
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 1.5rem;
+    }
+  
+    .footer-logo {
+        width: 150px;
+        margin: 0 auto;
+    }
+  
+    .footer-paragraph {
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+    }
+  
+    .footer-title {
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+        margin-top: -1rem;
+    }
+  
+    .footer-right {
+        align-items: center;
+        margin: 0;
+    }
+  
+    .social-logos {
+        gap: 1rem;
+        justify-content: center;
+    }
+  
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+  
+    .copyright {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .new-footer {
+        padding: 1.5rem;
+    }
+  
+    .footer-title {
+        font-size: 1.8rem;
+    }
+  
+    .footer-paragraph {
+        font-size: 0.9rem;
+    }
+  
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .new-footer {
+        padding: 1.2rem;
+    }
+  
+    .footer-title {
+        font-size: 1.6rem;
+    }
+  
+    .footer-paragraph {
+        font-size: 0.85rem;
+    }
+  
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+  }
