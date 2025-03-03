@@ -1,167 +1,394 @@
-/* Estilos para la barra de navegación */
-nav .aplicar {
-    padding-right: 3rem;
-}
-
-nav .collapse {
-    padding-left: 5rem !important;
-}
-
-
+/* Estilos generales del navbar */
+.navbar {
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-brand {
+    padding: 0;
+  }
+  
+  .navbar-brand img {
+    height: 35px;
+    width: auto;
+  }
+  
+  /* Estilos para el botón hamburguesa */
+  .navbar-toggler {
+    border: none;
+    padding: 0.25rem;
+    margin-right: 0.5rem;
+  }
+  
+  .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(144, 250, 117, 0.5);
+    outline: none;
+  }
+  
+  .navbar-toggler[aria-expanded="true"] {
+    border: 2px solid #080808;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Estilos para los items del menú */
+  .navbar-nav {
+    padding: 1rem 0;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0.8rem;
+  }
+  
+  /* Aplicar el mismo estilo de botón a ambos enlaces */
+  .navbar-nav .preguntas-frecuentes,
+  .navbar-nav .btn-contacto {
+    background-color: #90fa75;
+    color: #000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .navbar-nav .preguntas-frecuentes:hover,
+  .navbar-nav .btn-contacto:hover {
+    background-color: #7de863;
+    transform: translateY(-2px);
+  }
+  
+  /* Mejoras para el menú desplegable */
+  .navbar-collapse {
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-collapse.show {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    border-radius: 0 0 15px 15px;
+  }
+  
+  /* Media query para móviles */
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      background-color: white;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1030;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 1rem;
+      border-radius: 0 0 1rem 1rem;
+    }
+    
+    .navbar-nav .preguntas-frecuentes,
+    .navbar-nav .btn-contacto {
+      margin: 0.7rem auto;
+      width: 80%;
+      text-align: center;
+      padding: 0.6rem 1rem;
+    }
+    
+    /* Eliminar estilos antiguos que ya no necesitamos */
+    nav .aplicar {
+      padding-right: 0;
+    }
+    
+    nav .collapse {
+      padding-left: 0 !important;
+    }
+  }
+  
+  /* Media query para móviles pequeños */
+  @media (max-width: 480px) {
+    .navbar-nav .preguntas-frecuentes,
+    .navbar-nav .btn-contacto {
+      width: 90%;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Media query para móviles muy pequeños */
+  @media (max-width: 360px) {
+    .navbar {
+      padding: 0.4rem 0.8rem;
+    }
+    
+    .navbar-brand img {
+      height: 30px;
+    }
+  }
 /* ----------------------------------SECCION 1 ------------------------------------------*/
 
-/* Estilos base del formulario */
+/* Estilos mejorados para el formulario de contacto */
 .contact-form {
-    padding: 8rem 0 4rem 0;
+    padding: 8rem 0 5rem 0;
     font-family: 'Nunito Sans', sans-serif;
     background-color: #8cfc6d;
     position: relative;
     overflow: hidden;
-}
-
-.contact-form .container {
-    max-width: 600px;
-    margin-left: 10rem;
-}
-
-.contact-form h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-/* Elementos del formulario */
-.custom-input, .custom-textarea {
     width: 100%;
-    padding: 0.75rem;
+  }
+  
+  .contact-form .container {
+    max-width: 600px;
+    margin: 0 auto 0 10rem;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .contact-form h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    color: #000000;
+    position: relative;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .form-group p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Elementos del formulario */
+  .custom-input, 
+  .custom-textarea {
+    width: 100%;
+    padding: 0.85rem 1.2rem;
     border: 3px solid #000000;
     font-size: 1rem;
-}
-
-.custom-input {
+    font-family: 'Nunito Sans', sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-input:focus, 
+  .custom-textarea:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-input {
     border-radius: 50px;
-}
-
-.custom-textarea {
+    height: 50px;
+  }
+  
+  .custom-textarea {
     border-radius: 25px;
     resize: vertical;
-}
-
-/* Estilos de los radio buttons */
-.check-container {
+    min-height: 120px;
+    padding: 1rem 1.2rem;
+  }
+  
+  /* Estilos de los radio buttons */
+  .check-container {
     display: flex;
     gap: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
-}
-
-/* Smartphone grande (720x1280) */
-@media (max-width: 720px) {
+  }
+  
+  .form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-check-input {
+    margin-right: 0.5rem;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .form-check-label {
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  /* Botón de enviar */
+  .btn-enviar {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .btn-enviar:hover {
+    background-color: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-enviar:active {
+    transform: translateY(-1px);
+  }
+  
+  /* Media queries para tablets y dispositivos medianos */
+  @media (min-width: 769px) and (max-width: 1023px) {
     .contact-form {
-        padding: 6rem 1rem 3rem;
+      padding: 7rem 0 4rem;
     }
     
     .contact-form .container {
-        margin: 0 auto;
-        padding: 0 1.5rem;
+      margin: 0 5rem;
+      max-width: 600px;
     }
     
-    .contact-form h1 {
-        font-size: 2.2rem;
+    .form-group p {
+      font-size: 1rem;
     }
-    
-    .check-container {
-        gap: 1.5rem;
-    }
-    
-    .btn-enviar {
-        width: 100%;
-    }
-}
-
-/* Móvil medio (375x667) */
-@media (max-width: 375px) {
+  }
+  
+  /* Media queries para tablets pequeñas */
+  @media (min-width: 481px) and (max-width: 768px) {
     .contact-form {
-        padding: 5rem 0.5rem 2rem;
+      padding: 6rem 0 3rem;
     }
     
     .contact-form .container {
-        padding: 0 1rem;
+      margin: 0 auto;
+      padding: 0 2rem;
+      max-width: 90%;
     }
     
     .contact-form h1 {
-        font-size: 2rem;
+      margin-bottom: 2rem;
     }
     
     .form-group {
-        margin-bottom: 1rem;
-    }
-    
-    .custom-input, .custom-textarea {
-        padding: 0.6rem;
-        font-size: 0.9rem;
+      margin-bottom: 1.2rem;
     }
     
     .check-container {
-        flex-direction: column;
-        gap: 0.5rem;
+      gap: 1.5rem;
     }
-}
-
-/* Móvil pequeño (360x640) */
-@media (max-width: 360px) {
+  }
+  
+  /* Media queries para smartphones */
+  @media (max-width: 480px) {
+    .contact-form {
+      padding: 5.5rem 0 3rem;
+    }
+    
+    .contact-form .container {
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+    
     .contact-form h1 {
-        font-size: 1.8rem;
+      font-size: 2.2rem;
+      margin-bottom: 1.8rem;
     }
     
-    .contact-form p {
-        font-size: 0.9rem;
+    .form-group p {
+      font-size: 1rem;
     }
     
-    .custom-input, .custom-textarea {
-        padding: 0.5rem;
-        font-size: 0.85rem;
-        border-width: 2px;
+    .custom-input, 
+    .custom-textarea {
+      padding: 0.75rem 1rem;
+      border-width: 2px;
+    }
+    
+    .custom-input {
+      height: 45px;
+    }
+    
+    .check-container {
+      gap: 1rem;
+      flex-direction: column;
+    }
+    
+    .form-check {
+      margin-bottom: 0.3rem;
     }
     
     .btn-enviar {
-        font-size: 1rem;
-        padding: 12px 30px;
+      width: 100%;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
     }
-}
+  }
+  
+  /* Media queries para móviles pequeños */
+  @media (max-width: 360px) {
+    .contact-form {
+      padding: 5rem 0 2.5rem;
+    }
+    
+    .contact-form .container {
+      padding: 0 1.2rem;
+    }
+    
+    .contact-form h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group p {
+      font-size: 0.95rem;
+    }
+    
+    .custom-input, 
+    .custom-textarea {
+      padding: 0.7rem 0.9rem;
+      font-size: 0.9rem;
+    }
+    
+    .form-check-input {
+      width: 16px;
+      height: 16px;
+    }
+    
+    .form-check-label {
+      font-size: 0.9rem;
+    }
+    
+    .btn-enviar {
+      padding: 0.7rem 1.8rem;
+      font-size: 0.95rem;
+    }
+  }
 
-/* Footer responsivo */
-@media (max-width: 720px) {
-    .new-footer {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-        gap: 2rem;
-    }
-    
-    .footer-left, .footer-right {
-        margin: 0;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .footer-title {
-        font-size: 2rem;
-    }
-}
 
 
 
 /* ----------------------------------FOOTER ------------------------------------------*/
 
 
-/* Estilos generales del footer */
+/* Estilos mejorados para el footer */
 .new-footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 4rem 6rem;
     background: #F3F3F3;
     font-family: 'Nunito Sans', sans-serif;
+    width: 100%;
   }
   
   /* Estilos contenedor izquierdo */
@@ -169,8 +396,8 @@ nav .collapse {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-right: 0;
-    margin-left: 10%;
+    padding-right: 2rem;
+    margin-left: 0;
   }
   
   .footer-logo {
@@ -182,13 +409,16 @@ nav .collapse {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #333;
+    margin: 0;
+    max-width: 90%;
   }
   
   .footer-title {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     font-weight: 700;
     color: #050505;
-    margin-top: -3rem;
+    margin-top: 0;
+    line-height: 1.2;
   }
   
   /* Estilos contenedor derecho */
@@ -198,14 +428,13 @@ nav .collapse {
     align-items: flex-end;
     justify-content: flex-end;
     gap: 2rem;
-    margin-right: 10%;
   }
   
   /* Estilos para los iconos sociales */
   .social-logos {
     display: flex;
     gap: 2rem;
-    align-items: left;
+    align-items: center;
   }
   
   .social-icon {
@@ -218,112 +447,147 @@ nav .collapse {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
+    overflow: visible;
   }
   
   .social-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   
+  /* Ajuste específico para el logo de Instagram */
   .social-icon svg {
-    width: 25px;
-    /* Ajustado para mantener proporción similar a tus iconos originales */
-    height: auto;
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+  
+  /* Corrección específica para el icono de Instagram */
+  .social-icon:first-child svg {
+    width: 24px;
+    height: 24px;
+    /* Aseguramos que el SVG de Instagram se muestre correctamente */
+    transform: scale(1);
+    fill: white;
   }
   
   .copyright {
     font-size: 1rem;
     color: #666;
+    margin: 0;
   }
   
-  @media (max-width: 720px) {
+  /* Media queries para tablets */
+  @media (max-width: 1023px) {
     .new-footer {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem;
-        gap: 2rem;
+      padding: 3rem 4rem;
+      gap: 3rem;
     }
-  
+    
     .footer-left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        gap: 1.5rem;
+      padding-right: 1rem;
     }
-  
-    .footer-logo {
-        width: 150px;
-        margin: 0 auto;
-    }
-  
+    
     .footer-paragraph {
-        font-size: 1rem;
-        text-align: center;
-        margin: 0;
+      font-size: 1.1rem;
     }
-  
+    
     .footer-title {
-        font-size: 2rem;
-        text-align: center;
-        margin: 0;
-        margin-top: -1rem;
+      font-size: 2.8rem;
     }
-  
-    .footer-right {
-        align-items: center;
-        margin: 0;
-    }
-  
-    .social-logos {
-        gap: 1rem;
-        justify-content: center;
-    }
-  
+    
     .social-icon {
-        width: 40px;
-        height: 40px;
-    }
-  
-    .copyright {
-        text-align: center;
-        font-size: 0.9rem;
+      width: 45px;
+      height: 45px;
     }
   }
   
-  @media (max-width: 375px) {
+  /* Media queries para tablets pequeñas y móviles */
+  @media (max-width: 767px) {
     .new-footer {
-        padding: 1.5rem;
+      grid-template-columns: 1fr;
+      padding: 3rem 2rem;
+      gap: 3rem;
     }
-  
-    .footer-title {
-        font-size: 1.8rem;
+    
+    .footer-left {
+      padding-right: 0;
+      margin-left: 0;
+      align-items: center;
+      text-align: center;
     }
-  
+    
     .footer-paragraph {
-        font-size: 0.9rem;
+      max-width: 100%;
+      text-align: center;
     }
-  
-    .social-icon {
-        width: 35px;
-        height: 35px;
+    
+    .footer-title {
+      text-align: center;
+    }
+    
+    .footer-right {
+      align-items: center;
     }
   }
   
+  /* Media queries para móviles pequeños */
+  @media (max-width: 480px) {
+    .new-footer {
+      padding: 2.5rem 1.5rem;
+    }
+    
+    .footer-logo {
+      width: 150px;
+    }
+    
+    .footer-paragraph {
+      font-size: 1rem;
+    }
+    
+    .footer-title {
+      font-size: 2.2rem;
+    }
+    
+    .social-logos {
+      gap: 1.5rem;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .social-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  /* Media queries para móviles muy pequeños */
   @media (max-width: 360px) {
     .new-footer {
-        padding: 1.2rem;
+      padding: 2rem 1rem;
     }
-  
-    .footer-title {
-        font-size: 1.6rem;
-    }
-  
+    
     .footer-paragraph {
-        font-size: 0.85rem;
+      font-size: 0.9rem;
     }
-  
+    
+    .footer-title {
+      font-size: 2rem;
+    }
+    
+    .social-logos {
+      gap: 1rem;
+    }
+    
     .social-icon {
-        width: 32px;
-        height: 32px;
+      width: 35px;
+      height: 35px;
+    }
+    
+    .social-icon svg {
+      width: 18px;
+      height: 18px;
     }
   }

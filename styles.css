@@ -101,170 +101,73 @@ section {
   - Ajusta el espacio entre el texto y el icono del dropdown.
 */
 /* Estilos generales del navbar */
-.navbar {
-  padding: 0.5rem 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Estilos mejorados para los botones del navbar */
+
+/* Estilos para los links de navegación */
+.navbar-nav .nav-item {
+  margin: 0.5rem 0.8rem;
 }
 
-.navbar-brand {
-  padding: 0;
-}
-
-.navbar-brand img {
-  height: 35px;
-  width: auto;
-}
-
-/* Estilos para el botón hamburguesa */
-.navbar-toggler {
-  border: none;
-  padding: 0.25rem;
-  margin-right: 0.5rem;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-  outline: none;
-}
-
-/* Estilos para los items del menú */
-.navbar-nav {
-  padding: 1rem 0;
-}
-
-.nav-item {
-  margin: 0.5rem 0;
-}
-
-/* Estilos para los enlaces */
-.preguntas-frecuentes {
-  color: #000;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.btn-contacto {
+/* Aplicar el mismo estilo de botón a ambos enlaces */
+.navbar-nav .preguntas-frecuentes,
+.navbar-nav .btn-contacto {
   background-color: #90fa75;
   color: #000;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
   font-weight: bold;
-  margin: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   display: inline-block;
+  text-decoration: none;
 }
 
-/* Media query para móviles pequeños */
-@media (max-width: 360px) {
-  .navbar {
-      padding: 0.5rem;
-  }
-  
-  .navbar-brand img {
-      height: 30px;
-  }
-  
-  .btn-contacto {
-      margin: 0.5rem auto;
-      display: inline-block;
-      width: auto;
-  }
-  
-  .navbar-collapse {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 0 0 10px 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
+.navbar-nav .preguntas-frecuentes:hover,
+.navbar-nav .btn-contacto:hover {
+  background-color: #7de863;
+  transform: translateY(-2px);
 }
 
-/* Animación para el menú desplegable */
+/* Indicador visual para cuando el menú está abierto */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  border: 2px solid #000000;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Mejorar visualmente el menú desplegable móvil */
 .navbar-collapse {
   transition: all 0.3s ease;
+  border-radius: 0 0 15px 15px;
 }
 
-/* Media query para móvil medio (375x667) */
-@media (min-width: 361px) and (max-width: 375px) {
-  .navbar {
-      padding: 0.6rem;
-  }
-  
-  .navbar-brand img {
-      height: 30px;
-  }
-  
-  .btn-contacto {
-      margin: 0.5rem auto;
-      padding: 0.45rem 1.3rem;
-      font-size: 0.95rem;
-  }
-  
-  .navbar-collapse {
-      background-color: white;
-      padding: 0.9rem;
-      border-radius: 0 0 10px 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
+.navbar-collapse.show {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #020202;
+}
 
-  .preguntas-frecuentes {
-      font-size: 0.95rem;
+/* Ajustes responsivos para los botones */
+@media (max-width: 767px) {
+  .navbar-nav .preguntas-frecuentes,
+  .navbar-nav .btn-contacto {
+    margin: 0.7rem auto;
+    width: 80%;
+    text-align: center;
+    padding: 0.6rem 1rem;
   }
 }
 
-/* Media query para smartphone grande (720x1280) */
-@media (min-width: 376px) and (max-width: 720px) {
-  .navbar {
-      padding: 0.7rem 1rem;
-  }
-  
-  .navbar-brand img {
-      height: 32px;
-  }
-  
-  .btn-contacto {
-      margin: 0.5rem auto;
-      padding: 0.5rem 1.5rem;
-      font-size: 1rem;
-  }
-  
-  .navbar-collapse {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 0 0 12px 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .preguntas-frecuentes {
-      font-size: 1rem;
-  }
-}
-
-/* Estilos comunes para todos los tamaños móviles */
-@media (max-width: 720px) {
-  .navbar-collapse {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-  }
-
-  .nav-item {
-      text-align: center;
-  }
-
-  .btn-contacto {
-      display: inline-block;
-      width: auto;
-  }
-
-  .navbar-toggler {
-      padding: 0.2rem 0.5rem;
-  }
-
-  /* Mejora en la interacción táctil */
-  .nav-link {
-      padding: 0.8rem 1rem;
+@media (max-width: 480px) {
+  .navbar-nav .preguntas-frecuentes,
+  .navbar-nav .btn-contacto {
+    width: 90%;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -1690,6 +1593,13 @@ section {
 =========================================
 */
 
+/* 
+=========================================
+  ESTILOS ACTUALIZADOS PARA SECCIONES 16, 17 Y 18
+  (Imagen grande con texto superpuesto)
+=========================================
+*/
+
 /* Estilos base comunes */
 .sixteenth,
 .seventeenth,
@@ -1728,10 +1638,11 @@ section {
   position: relative;
   width: 90%;
   max-width: 600px;
-  padding: 3rem 2.5rem;
-  border-radius: 2.5rem;
+  padding: 3.5rem 2.5rem; /* Aumentado el padding superior para separar el título */
+  border-radius: 30px; /* Asegurar que todas las esquinas tengan el mismo radio */
   z-index: 2;
   margin: -70px auto 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sutil para resaltar */
 }
 
 /* Estilos para títulos */
@@ -1739,7 +1650,8 @@ section {
 .seventeenth h1,
 .eighteenth h1 {
   font-size: clamp(2.2rem, 4vw, 3.5rem);
-  margin-bottom: 1.5rem;
+  margin-top: 0; /* Reset del margen superior */
+  margin-bottom: 1.8rem; /* Aumentado para mejorar espaciado */
   font-weight: 800;
   line-height: 1.2;
 }
@@ -1754,20 +1666,23 @@ section {
   margin: 0;
 }
 
-/* Colores específicos para cada sección */
+/* Colores específicos para cada sección con bordes consistentes */
 .sixteenth .text-container {
   background-color: #6676D1;
   color: #ffffff;
+  border-radius: 30px;
 }
 
 .seventeenth .text-container {
   background-color: #8cfc6d;
   color: #000000;
+  border-radius: 30px;
 }
 
 .eighteenth .text-container {
   background-color: #4DA0E5;
   color: #ffffff;
+  border-radius: 30px;
 }
 
 /* Media queries para dispositivos grandes */
@@ -1806,8 +1721,8 @@ section {
   .sixteenth .text-container,
   .seventeenth .text-container,
   .eighteenth .text-container {
-    padding: 4rem;
-    border-radius: 3rem;
+    padding: 4.5rem 4rem 4rem; /* Más padding superior para los títulos */
+    border-radius: 30px;
   }
 }
 
@@ -1850,8 +1765,8 @@ section {
   .sixteenth .text-container,
   .seventeenth .text-container,
   .eighteenth .text-container {
-    padding: 3.5rem;
-    border-radius: 2.8rem;
+    padding: 4rem 3.5rem 3.5rem; /* Más padding superior */
+    border-radius: 30px;
   }
 }
 
@@ -1867,8 +1782,8 @@ section {
   .seventeenth .text-container,
   .eighteenth .text-container {
     max-width: 500px;
-    padding: 3rem;
-    border-radius: 2.5rem;
+    padding: 3.5rem 3rem 3rem;
+    border-radius: 25px;
     margin-top: -60px;
   }
   
@@ -1876,7 +1791,7 @@ section {
   .seventeenth h1,
   .eighteenth h1 {
     font-size: 2.5rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.4rem;
   }
 }
 
@@ -1893,8 +1808,8 @@ section {
   .eighteenth .text-container {
     width: 90%;
     max-width: 450px;
-    padding: 2.5rem;
-    border-radius: 2rem;
+    padding: 3rem 2.5rem 2.5rem;
+    border-radius: 25px;
     margin-top: -50px;
   }
   
@@ -1902,7 +1817,7 @@ section {
   .seventeenth h1,
   .eighteenth h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
   
   .sixteenth p,
@@ -1925,8 +1840,8 @@ section {
   .seventeenth .text-container,
   .eighteenth .text-container {
     width: 92%;
-    padding: 2rem;
-    border-radius: 1.5rem;
+    padding: 2.8rem 2rem 2rem;
+    border-radius: 20px;
     margin-top: -40px;
   }
   
@@ -1934,7 +1849,7 @@ section {
   .seventeenth h1,
   .eighteenth h1 {
     font-size: 1.8rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
   }
   
   .sixteenth p,
@@ -1951,8 +1866,8 @@ section {
   .seventeenth .text-container,
   .eighteenth .text-container {
     width: 94%;
-    padding: 1.8rem;
-    border-radius: 1.2rem;
+    padding: 2.5rem 1.8rem 1.8rem;
+    border-radius: 20px;
     margin-top: -30px;
   }
   
