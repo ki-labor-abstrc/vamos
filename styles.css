@@ -151,6 +151,14 @@ section {
   border-bottom: 2px solid #020202;
 }
 
+Ajuste del Tamaño del Logo en el Navbar
+
+/* Ajuste para el tamaño del logo en el navbar */
+.navbar-brand img {
+  height: 35px; /* Tamaño consistente con las otras páginas */
+  width: auto;
+}
+
 /* Ajustes responsivos para los botones */
 @media (max-width: 767px) {
   .navbar-nav .preguntas-frecuentes,
@@ -168,6 +176,9 @@ section {
     width: 90%;
     padding: 0.5rem 0.8rem;
     font-size: 0.95rem;
+  }
+  .navbar-brand img {
+    height: 30px;
   }
 }
 
