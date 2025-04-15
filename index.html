@@ -1,570 +1,670 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VAMOS - Financiamiento Educativo y Bootcamps de Tecnología</title>
-  
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="VAMOS - Financiamiento educativo para impulsar tu carrera profesional. Bootcamps de tecnología y desarrollo de habilidades.">
-    <meta name="keywords" content="educación, financiamiento, bootcamp, tecnología, desarrollo profesional, VAMOS">
-    <meta name="author" content="VAMOS">
-    
+    <meta
+      name="description"
+      content="VAMOS - Financiamiento educativo para impulsar tu carrera profesional. Bootcamps de tecnología y desarrollo de habilidades."
+    />
+    <meta
+      name="keywords"
+      content="educación, financiamiento, bootcamp, tecnología, desarrollo profesional, VAMOS"
+    />
+    <meta name="author" content="VAMOS" />
+
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.facebook.com/hello.thincrs">
-    <meta property="og:title" content="VAMOS - Financiamiento Educativo">
-    <meta property="og:description" content="Impulsa tu carrera con nuestros programas de financiamiento y bootcamps en tecnología.">
-    <meta property="og:image" content="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-6/310543530_964490901147219_3769298219640322398_n.png?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEPneyjv9OnfU3cFpdMGuvLK-ac3Hf-_ekr5pzcd_796WZNbk7XunxeQOUSNoiuY_t7Au62BoB_3FtzNkVJxViR&_nc_ohc=copmYvdzzPYQ7kNvgHGkq5Y&_nc_ht=scontent-qro1-2.xx&_nc_gid=AL1_6IVfYy5We9uAlCMZ7gV&oh=00_AYBt4nw_BN2wQCngfhVxBjX6BNupR-hkmHTSx3L6-8lMuw&oe=66EE6D46">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.facebook.com/hello.thincrs" />
+    <meta property="og:title" content="VAMOS - Financiamiento Educativo" />
+    <meta
+      property="og:description"
+      content="Impulsa tu carrera con nuestros programas de financiamiento y bootcamps en tecnología."
+    />
+    <meta
+      property="og:image"
+      content="https://scontent-qro1-2.xx.fbcdn.net/v/t39.30808-6/310543530_964490901147219_3769298219640322398_n.png?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEPneyjv9OnfU3cFpdMGuvLK-ac3Hf-_ekr5pzcd_796WZNbk7XunxeQOUSNoiuY_t7Au62BoB_3FtzNkVJxViR&_nc_ohc=copmYvdzzPYQ7kNvgHGkq5Y&_nc_ht=scontent-qro1-2.xx&_nc_gid=AL1_6IVfYy5We9uAlCMZ7gV&oh=00_AYBt4nw_BN2wQCngfhVxBjX6BNupR-hkmHTSx3L6-8lMuw&oe=66EE6D46"
+    />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white fixed-top w-100">
-  <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-          <img class="group-39793-1wMAcK" src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39793@2x.png" alt="Logo VAMOS" />
-      </a>
-      
-      <!-- Botón hamburguesa -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top w-100">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            class="group-39793-1wMAcK"
+            src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39793@2x.png"
+            alt="Logo VAMOS"
+          />
+        </a>
+
+        <!-- Botón hamburguesa -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <!-- Contenido del menú colapsable -->
-      <div class="collapse navbar-collapse" id="navbarNav">
+        </button>
+
+        <!-- Contenido del menú colapsable -->
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto text-center">
-              <li class="nav-item">
-                  <a class="nav-link preguntas-frecuentes" href="faq.html">Preguntas frecuentes</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link btn-contacto" href="contacto.html">Contáctanos</a>
-              </li>
+            <li class="nav-item">
+              <a class="nav-link preguntas-frecuentes" href="faq.html"
+                >Preguntas frecuentes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn-contacto" href="contacto.html"
+                >Contáctanos</a
+              >
+            </li>
           </ul>
+        </div>
       </div>
-  </div>
-</nav>
-    
-    
+    </nav>
 
+    <section class="first">
+      <!-- Imagen de fondo -->
+      <img
+        class="background-image screen-shot-2023-09-26-at-1439-1-1wMAcK"
+        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/screen-shot-2023-09-26-at-14-39-1.png"
+        alt="Background"
+      />
 
+      <!-- Vector decorativo -->
+      <img
+        class="vector-1wMAcK"
+        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector.svg"
+        alt="Vector decoration"
+      />
 
+      <!-- Rectángulo decorativo -->
+      <img
+        class="rectangle-5792-1wMAcK"
+        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5792.png"
+        alt="Decorative rectangle"
+      />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-<section class="first">
-  <!-- Imagen de fondo -->
-  <img
-      class="background-image screen-shot-2023-09-26-at-1439-1-1wMAcK"
-      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/screen-shot-2023-09-26-at-14-39-1.png"
-      alt="Background"
-  />
-  
-  <!-- Vector decorativo -->
-  <img
-      class="vector-1wMAcK"
-      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector.svg"
-      alt="Vector decoration"
-  />
-  
-  <!-- Rectángulo decorativo -->
-  <img
-      class="rectangle-5792-1wMAcK"
-      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5792.png"
-      alt="Decorative rectangle"
-  />
-  
-  <!-- Contenedor principal del contenido -->
-  <div class="content-container">
-      <!-- Título principal -->
-      <h1 class="title-1wMAcK">
+      <!-- Contenedor principal del contenido -->
+      <div class="content-container">
+        <!-- Título principal -->
+        <h1 class="title-1wMAcK">
           <span class="span0-ncxXJd">Inversiones</span>
           <span class="span1-ncxXJd"> educativas</span>
-      </h1>
-      
-      <!-- Texto descriptivo -->
-      <p class="invierte-en-lo-ms-po-1wMAcK">
+        </h1>
+
+        <!-- Texto descriptivo -->
+        <p class="invierte-en-lo-ms-po-1wMAcK">
           Invierte en lo más poderoso, las personas, obteniendo atractivos
           rendimientos con alto impacto.
-      </p>
-  </div>
-</section>
-  
+        </p>
+      </div>
+    </section>
 
     <section class="second">
-       
-            <div class="content">
-                <!-- Sección derecha con texto -->
-                <div class="right-section">
-                    <h1>Le apostamos a la<br> educación</h1>
-                    <p>Invertir en educación con <span>VAMOS</span> no solo asegura rendimientos confiables, sino que también garantiza un impacto positivo en el futuro de jóvenes talentosos.
-                    Al apostar por la educación, estás contribuyendo a un modelo donde todos ganamos: tú como inversionista ves crecer tu capital de manera segura, mientras que los estudiantes desarrollan las habilidades necesarias para prosperar en el mundo laboral.</p>
-                    <h6>Juntos, construimos un futuro más sólido y equitativo.</h6>
-                </div>
-                <img
+      <div class="content">
+        <!-- Sección derecha con texto -->
+        <div class="right-section">
+          <h1>
+            Le apostamos a la<br />
+            educación
+          </h1>
+          <p>
+            Invertir en educación con <span>VAMOS</span> no solo asegura
+            rendimientos confiables, sino que también garantiza un impacto
+            positivo en el futuro de jóvenes talentosos. Al apostar por la
+            educación, estás contribuyendo a un modelo donde todos ganamos: tú
+            como inversionista ves crecer tu capital de manera segura, mientras
+            que los estudiantes desarrollan las habilidades necesarias para
+            prosperar en el mundo laboral.
+          </p>
+          <h6>Juntos, construimos un futuro más sólido y equitativo.</h6>
+        </div>
+        <img
           class="vector-G6t8xS vector"
           data-id="104:308"
           src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-1.svg"
           anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-1.svg"
           alt="Vector"
         />
-                <!-- Sección izquierda con imagen -->
-                <div class="left-section">
-                    <img
-                        class="image-1wMAcK image"
-                        data-id="104:305"
-                        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/image.png"
-                        anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/image.png"
-                        alt="image"
-                        />
-                </div>
-            </div>
+        <!-- Sección izquierda con imagen -->
+        <div class="left-section">
+          <img
+            class="image-1wMAcK image"
+            data-id="104:305"
+            src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/image.png"
+            anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/image.png"
+            alt="image"
+          />
+        </div>
+      </div>
     </section>
 
     <section class="fourth">
-        <img
-          class="vector-qz4p61 vector"
-          data-id="104:311"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-2.svg"
-          anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-2.svg"
-          alt="Vector"
-        />
-        <!--tercera seccion-->
-        <div class="qu-es-vamos-1wMAcK" data-id="104:312">¿Qué es vamos?</div>
-        <p class="somos-un-fondo-dedic-1wMAcK" data-id="104:313">
-          Somos un fondo dedicado a financiar proyectos educativos para acortar
-          la brecha entre la industria y la academia, ofreciendo a nuestros
-          estudiantes programas internacionales de desarrollo profesional así
-          como de power skills, para generar mayores ofertas de empleos
-          mejorando su calidad de vida.
-        </p>
-        <p class="con-ms-de-27-aos-en-1wMAcK" data-id="104:314">
-          Con más de 27 años en el sector educativo, VAMOS ofrece una
-          oportunidad única para que inversionistas contribuyan al desarrollo de
-          talento mientras obtienen rendimientos competitivos.
-        </p>
+      <img
+        class="vector-qz4p61 vector"
+        data-id="104:311"
+        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-2.svg"
+        anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-2.svg"
+        alt="Vector"
+      />
+      <!--tercera seccion-->
+      <div class="qu-es-vamos-1wMAcK" data-id="104:312">¿Qué es vamos?</div>
+      <p class="somos-un-fondo-dedic-1wMAcK" data-id="104:313">
+        Somos un fondo dedicado a financiar proyectos educativos para acortar la
+        brecha entre la industria y la academia, ofreciendo a nuestros
+        estudiantes programas internacionales de desarrollo profesional así como
+        de power skills, para generar mayores ofertas de empleos mejorando su
+        calidad de vida.
+      </p>
+      <p class="con-ms-de-27-aos-en-1wMAcK" data-id="104:314">
+        Con más de 27 años en el sector educativo, VAMOS ofrece una oportunidad
+        única para que inversionistas contribuyan al desarrollo de talento
+        mientras obtienen rendimientos competitivos.
+      </p>
     </section>
 
     <section class="fifth">
+      <img
+        class="vector"
+        data-id="104:322"
+        src="img\Group 39821.svg"
+        alt="Group 39813"
+      />
+      <div class="image-section">
         <img
-          class="vector"
-          data-id="104:322"
-          src="img\Group 39821.svg"
-          
-          alt="Group 39813"
+          alt="A smiling woman standing in front of a blue and white wall"
+          height="600"
+          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group.png"
+          width="450"
         />
-    <div class="image-section">
-     <img alt="A smiling woman standing in front of a blue and white wall" height="600" src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group.png" width="450"/>
-     
-    </div>
-    <div class="text-section">
-     <h1>
-      ¿Cómo lo hacemos?
-     </h1>
-     <ul>
-      <li>
-       <img
-          class="group-39813-1wMAcK"
-          data-id="104:322"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39813@2x.png"
-          anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39813@2x.png"
-          alt="Group 39813"
-        />
-       <p>
-        <strong>
-         Diseñamos y ejecutamos
-        </strong>
-        <br/>
-        proyectos educativos a partir de las necesidades laborales de mercado en la economía digital.
-       </p>
-      </li>
-      <li>
-       <img
-          class="group-39811-1wMAcK"
-          data-id="104:337"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39811@2x.png"
-          anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39811@2x.png"
-          alt="Group 39811"
-        />
-       <p>
-        <strong>
-         Diagnóstico crediticio
-        </strong>
-        <br/>
-        para reducir la morosidad de los alumnos.
-       </p>
-      </li>
-      <li>
-       <img
-          class="icon-meter-1wMAcK"
-          data-id="104:343"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---meter.svg"
-          anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---meter.svg"
-          alt="icon - meter"
-        />
-       <p>
-        <strong>
-         Ofrecemos Alto rendimiento
-        </strong>
-        <br/>
-        a inversionistas en plazos cortos y con el mínimo riesgo a través de vehículos transparentes.
-       </p>
-      </li>
-      <li>
-       <img
-          class="group-39810-1wMAcK"
-          data-id="104:344"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39810@2x.png"
-          anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39810@2x.png"
-          alt="Group 39810"
-        />
-       <p>
-        <strong>
-         Realizamos diagnósticos profesionales
-        </strong>
-        <br/>
-        para detectar el talento y sus competencias de valor.
-       </p>
-      </li>
-      <li>
-       <img
-          class="group-39814-1wMAcK"
-          data-id="104:353"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39814@2x.png"
-          anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39814@2x.png"
-          alt="Group 39814"
-        />
-       <p>
-        <strong>
-         Vinculamos al talento
-        </strong>
-       <br/>
-        con empleos de alto valor y empresas conscientes.
-       </p>
-      </li>
-      <li>
-       <img
-          class="group-39812-1wMAcK"
-          data-id="104:363"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39812@2x.png"
-          anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39812@2x.png"
-          alt="Group 39812"
-        />
-       <p>
-        <strong>
-         Creamos economías circulares
-        </strong>
-       <br/>
-        para maximizar los recursos e impactos.
-       </p>
-      </li>
-     </ul>
-    </div>
-   </div>
+      </div>
+      <div class="text-section">
+        <h1>¿Cómo lo hacemos?</h1>
+        <ul>
+          <li>
+            <img
+              class="group-39813-1wMAcK"
+              data-id="104:322"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39813@2x.png"
+              anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39813@2x.png"
+              alt="Group 39813"
+            />
+            <p>
+              <strong> Diseñamos y ejecutamos </strong>
+              <br />
+              proyectos educativos a partir de las necesidades laborales de
+              mercado en la economía digital.
+            </p>
+          </li>
+          <li>
+            <img
+              class="group-39811-1wMAcK"
+              data-id="104:337"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39811@2x.png"
+              anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39811@2x.png"
+              alt="Group 39811"
+            />
+            <p>
+              <strong> Diagnóstico crediticio </strong>
+              <br />
+              para reducir la morosidad de los alumnos.
+            </p>
+          </li>
+          <li>
+            <img
+              class="icon-meter-1wMAcK"
+              data-id="104:343"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---meter.svg"
+              anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---meter.svg"
+              alt="icon - meter"
+            />
+            <p>
+              <strong> Ofrecemos Alto rendimiento </strong>
+              <br />
+              a inversionistas en plazos cortos y con el mínimo riesgo a través
+              de vehículos transparentes.
+            </p>
+          </li>
+          <li>
+            <img
+              class="group-39810-1wMAcK"
+              data-id="104:344"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39810@2x.png"
+              anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39810@2x.png"
+              alt="Group 39810"
+            />
+            <p>
+              <strong> Realizamos diagnósticos profesionales </strong>
+              <br />
+              para detectar el talento y sus competencias de valor.
+            </p>
+          </li>
+          <li>
+            <img
+              class="group-39814-1wMAcK"
+              data-id="104:353"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39814@2x.png"
+              anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39814@2x.png"
+              alt="Group 39814"
+            />
+            <p>
+              <strong> Vinculamos al talento </strong>
+              <br />
+              con empleos de alto valor y empresas conscientes.
+            </p>
+          </li>
+          <li>
+            <img
+              class="group-39812-1wMAcK"
+              data-id="104:363"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39812@2x.png"
+              anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39812@2x.png"
+              alt="Group 39812"
+            />
+            <p>
+              <strong> Creamos economías circulares </strong>
+              <br />
+              para maximizar los recursos e impactos.
+            </p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-
-<!-- Estructura HTML mejorada para la sección de inversión inteligente -->
-<section class="inversionin">
-  <img
-    class="vector-7"
-    src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-3.svg"
-    alt="Vector decorativo"
-  />
-  <div class="title">
-    Inversión inteligente
-    que
-    <span class="highlight">
-     cambia vidas
-    </span>
-  </div>
-  <div class="stats">
-    <div class="stat">
-      <div class="text">
-        <div class="value">
-          15%
+    <!-- Estructura HTML mejorada para la sección de inversión inteligente -->
+    <section class="inversionin">
+      <img
+        class="vector-7"
+        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-3.svg"
+        alt="Vector decorativo"
+      />
+      <div class="title">
+        Inversión inteligente que
+        <span class="highlight"> cambia vidas </span>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="text">
+            <div class="value">15%</div>
+            <div class="description">de rendimiento</div>
+          </div>
         </div>
-        <div class="description">
-          de rendimiento
+        <div class="stat">
+          <div class="text">
+            <div class="value">15</div>
+            <div class="description">meses o menos</div>
+          </div>
+        </div>
+        <div class="stat">
+          <div class="text">
+            <div class="value">5%</div>
+            <div class="description">semilla para becar<br />a más jóvenes</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="stat">
-      <div class="text">
-        <div class="value">
-          15
-        </div>
-        <div class="description">
-          meses o menos
-        </div>
-      </div>
-    </div>
-    <div class="stat">
-      <div class="text">
-        <div class="value">
-          5%
-        </div>
-        <div class="description">
-          semilla para becar<br/>a más jóvenes
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Estructura HTML mejorada para la sección catorce -->
-<section class="fourteenth">
-  <p class="co-invertimos-en-pro-1wMAcK nunitosans-extra-bold-black-65px">
-    Co-invertimos en procesos educativos escalables y confiables
-  </p>
-  <p class="impulsamos-y-vincula-1wMAcK nunitosans-semi-bold-black-20px">
-    Impulsamos y vinculamos a nuestros talentos con empleos de alto valor
-    en industrias como Salud y Tecnología
-  </p>
-  
-  <!-- Contenedor de procesos -->
-  <div class="process-container">
-    <!-- Proceso 1 -->
-    <div class="process-item">
-      <div class="x1-1wMAcK">1</div>
-      <img
-        class="group-39815-1wMAcK"
-        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39815@2x.png"
-        alt="Group 39815"
-      />
-      <p class="seleccin-de-candidat-1wMAcK nunitosans-semi-bold-black-20px">
-        Selección de candidatos por competencias y estudio crediticio
+    <section class="fourteenth">
+      <p class="co-invertimos-en-pro-1wMAcK nunitosans-extra-bold-black-65px">
+        Co-invertimos en procesos educativos escalables y confiables
       </p>
-    </div>
-    
-    <!-- Proceso 2 -->
-    <div class="process-item">
-      <div class="x2-1wMAcK">2</div>
-      <img
-        class="icon-identification-1wMAcK"
-        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---identification.svg"
-        alt="icon - identification"
-      />
-      <p class="bootcamps-de-especia-1wMAcK nunitosans-semi-bold-black-20px">
-        Bootcamps de especialización hacia el empleo
+      <p class="impulsamos-y-vincula-1wMAcK nunitosans-semi-bold-black-20px">
+        Impulsamos y vinculamos a nuestros talentos con empleos de alto valor en
+        industrias como Salud y Tecnología
       </p>
-    </div>
-    
-    <!-- Proceso 3 -->
-    <div class="process-item">
-      <div class="x3-1wMAcK">3</div>
       <img
-        class="icon-star-1wMAcK"
-        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---star.svg"
-        alt="Icon - star"
-      />
-      <p class="vinculacin-con-traba-1wMAcK nunitosans-semi-bold-black-20px">
-        Vinculación con trabajo e inicio de pago de financiamiento
-      </p>
-    </div>
-  </div>
-</section>
+      class="rectangle-5794-1wMAcK"
+      data-id="104:379"
+      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5794.png"
+      anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5794.png"
+      alt="Rectangle 5794"
+    /><img
+      class="rectangle-5795-1wMAcK"
+      data-id="104:380"
+      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5795.png"
+      anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5795.png"
+      alt="Rectangle 5795"
+    /><img
+      class="rectangle-5796-1wMAcK"
+      data-id="104:381"
+      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5796.png"
+      anima-src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5796.png"
+      alt="Rectangle 5796"
+    />
+      <!-- Contenedor de procesos -->
+      <div class="process-container">
+        <!-- Proceso 1 -->
+        <div class="process-item">
+          <div class="x1-1wMAcK">1</div>
+          <img
+            class="group-39815-1wMAcK"
+            src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/group-39815@2x.png"
+            alt="Group 39815"
+          />
+          <p
+            class="seleccin-de-candidat-1wMAcK nunitosans-semi-bold-black-20px"
+          >
+            Selección de candidatos por competencias y estudio crediticio
+          </p>
+        </div>
+
+        <!-- Proceso 2 -->
+        <div class="process-item">
+          <div class="x2-1wMAcK">2</div>
+          <img
+            class="icon-identification-1wMAcK"
+            src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---identification.svg"
+            alt="icon - identification"
+          />
+          <p
+            class="bootcamps-de-especia-1wMAcK nunitosans-semi-bold-black-20px"
+          >
+            Bootcamps de especialización hacia el empleo
+          </p>
+        </div>
+
+        <!-- Proceso 3 -->
+        <div class="process-item">
+          <div class="x3-1wMAcK">3</div>
+          <img
+            class="icon-star-1wMAcK"
+            src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---star.svg"
+            alt="Icon - star"
+          />
+          <p
+            class="vinculacin-con-traba-1wMAcK nunitosans-semi-bold-black-20px"
+          >
+            Vinculación con trabajo e inicio de pago de financiamiento
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- Estructura HTML mejorada para la sección quince -->
-<section class="fifteenth">
-  <div class="contenedor">
-    <div class="title">
-      Un modelo simple y transparente<br />
-      donde todos ganan
-    </div>
-    <div class="flow-chart">
-      <div class="box1">
-        Inversión
-        <span>100%</span>
-        <img
-          class="icon-arrow-right-1-1wMAcK"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-1.svg"
-          alt="icon - arrow right 1"
-        />
+    <section class="fifteenth">
+      <div class="contenedor">
+        <div class="title">
+          Un modelo simple y transparente<br />
+          donde todos ganan
+        </div>
+        <div class="flow-chart">
+          <div class="box1">
+            Inversión
+            <span>100%</span>
+            <img
+              class="icon-arrow-right-1-1wMAcK"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-1.svg"
+              alt="icon - arrow right 1"
+            />
+          </div>
+          <div class="box2">
+            <img
+              class="icon2"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-3.svg"
+              alt="icon - arrow right 4"
+            />
+            <div>Fideicomiso VAMOS para proyectos que buscan retorno</div>
+            <div>Fundación EDUCO para proyectos filantrópicos</div>
+          </div>
+          <div class="box3">
+            <img
+              class="icon2"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-3.svg"
+              alt="icon - arrow right 4"
+            />
+            <div>
+              Proyectos educativos y financiamiento ISA (Income share agreement)
+              de 25
+            </div>
+            <div>5% de fee administrativo<br />5% para becas</div>
+          </div>
+          <div class="box1">
+            <img
+              class="icon3"
+              src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-1.svg"
+              alt="icon - arrow right 1"
+            />
+            Inversión Retorno
+            <span>115%</span>
+          </div>
+        </div>
       </div>
-      <div class="box2">
-        <img
-          class="icon2"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-3.svg"
-          alt="icon - arrow right 4"
-        />
-        <div>Fideicomiso VAMOS para proyectos que buscan retorno</div>
-        <div>Fundación EDUCO para proyectos filantrópicos</div>
-      </div>
-      <div class="box3">
-        <img
-          class="icon2"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-3.svg"
-          alt="icon - arrow right 4"
-        />
-        <div>Proyectos educativos y financiamiento ISA (Income share agreement) de 25</div>
-        <div>5% de fee administrativo<br />5% para becas</div>
-      </div>
-      <div class="box1">
-        <img
-          class="icon3"
-          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/icon---arrow-right-1.svg"
-          alt="icon - arrow right 1"
-        />
-        Inversión Retorno
-        <span>115%</span>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- NOTA: Estas son las estructuras simplificadas para las tres secciones.
      Reemplaza cada sección completa en tu HTML -->
 
-<!-- Sección 16 (Educación) -->
-<section class="sixteenth">
-  <div class="container">
-    <img
-      class="mask-group-G6t8xS mask-group"
-      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group-1.png"
-      alt="Mask group"
-    />
-  </div>
-  <!-- Contenedor de texto -->
-  <div class="text-container">
-    <h1>Educación</h1>
-    <p>La educación acorta la brecha entre la industria y la academia, transformando el conocimiento en habilidades prácticas a través de bootcamps, lo que impulsa el desarrollo personal y profesional de los talentos.</p>
-  </div>
-</section>
-
-<!-- Sección 17 (Tecnología) -->
-<section class="seventeenth">
-  <div class="container">
-    <img
-      class="mask-group-qz4p61 mask-group"
-      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group-2.png"
-      alt="Mask group"
-    />
-  </div>
-  <!-- Contenedor de texto -->
-  <div class="text-container">
-    <h1>Tecnología</h1>
-    <p>Utilizamos herramientas tecnológicas empoderadas con AI para medir y credencializar las capacidades del talento, acelerar los procesos educativos, vincular al talentos con oportunidades de trabajo compatibles y generar estadísticas y reportes que nos ayuden a aumentar el impacto.</p>
-  </div>
-</section>
-
-<!-- Sección 18 (Trabajo) -->
-<section class="eighteenth">
-  <div class="container">
-    <img
-      class="mask-group-7pzut4 mask-group"
-      src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group-3.png"
-      alt="Mask group"
-    />
-  </div>
-  <!-- Contenedor de texto -->
-  <div class="text-container">
-    <h1>Trabajo</h1>
-    <p>Vinculamos al talento con empleos de alto valor y empresas conscientes aliadas, impulsando el éxito de nuestros estudiantes y el retorno de la inversión.</p>
-  </div>
-</section>
+    <!-- Sección 16 (Educación) -->
+    <section class="sixteenth">
+      <div class="container">
+        <img
+          class="mask-group-G6t8xS mask-group"
+          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group-1.png"
+          alt="Mask group"
+        />
+      </div>
+      <!-- Contenedor de texto -->
+      <div class="text-container">
+        <h1>Educación</h1>
+        <p>
+          La educación acorta la brecha entre la industria y la academia,
+          transformando el conocimiento en habilidades prácticas a través de
+          bootcamps, lo que impulsa el desarrollo personal y profesional de los
+          talentos.
+        </p>
+      </div>
+    </section>
+    <br style="margin-bottom: 5rem !important;" />
+    <!-- Sección 17 (Tecnología) -->
+    <section class="seventeenth">
+      
+      <!-- Contenedor de texto -->
+      <div class="text-container">
+        <h1>Tecnología</h1>
+        <p>
+          Utilizamos herramientas tecnológicas empoderadas con AI para medir y
+          credencializar las capacidades del talento, acelerar los procesos
+          educativos, vincular al talentos con oportunidades de trabajo
+          compatibles y generar estadísticas y reportes que nos ayuden a
+          aumentar el impacto.
+        </p>
+      </div>
+      <div class="container">
+        <img
+          class="mask-group-qz4p61 mask-group"
+          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group-2.png"
+          alt="Mask group"
+        />
+      </div>
+    </section>
+    <br style="margin-bottom: 3rem !important;" />
+    <!-- Sección 18 (Trabajo) -->
+    <section class="eighteenth">
+      <div class="container">
+        <img
+          class="mask-group-7pzut4 mask-group"
+          src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/mask-group-3.png"
+          alt="Mask group"
+        />
+      </div>
+      <!-- Contenedor de texto -->
+      <div class="text-container">
+        <h1>Trabajo</h1>
+        <p>
+          Vinculamos al talento con empleos de alto valor y empresas conscientes
+          aliadas, impulsando el éxito de nuestros estudiantes y el retorno de
+          la inversión.
+        </p>
+      </div>
+    </section>
+    <br style="margin-bottom: 3rem !important;" />
 
     <!-- Estructura HTML mejorada para la sección diecinueve -->
-<section class="nineteenth">
-  <div class="container">
-    <div class="text-container">
-      <h1>
-        <span>El futuro que queremos lo estamos creando hoy</span>
-      </h1>
-      <h3>
-        <span>En VAMOS, apostamos por el talento que transforma el futuro. Al confiar en quienes harán la diferencia, juntos construimos un mañana lleno de oportunidades y éxito. Tu inversión en educación es una apuesta segura en el poder de los que harán el cambio.</span>
-      </h3>
-    </div>
-  </div>
-  <img
-    class="vector-a1"
-    src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-4.svg"
-    alt="Vector decorativo"
-  />
-  <img
-    class="vector-a2"
-    src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5803.png"
-    alt="Rectangle decorativo"
-  />
-</section>
+    <section class="nineteenth">
+      <div class="container">
+        <div class="text-container">
+          <h1>
+            <span>El futuro que queremos lo estamos creando hoy</span>
+          </h1>
+          <h3>
+            <span
+              >En VAMOS, apostamos por el talento que transforma el futuro. Al
+              confiar en quienes harán la diferencia, juntos construimos un
+              mañana lleno de oportunidades y éxito. Tu inversión en educación
+              es una apuesta segura en el poder de los que harán el
+              cambio.</span
+            >
+          </h3>
+        </div>
+      </div>
+      <img
+        class="vector-a1"
+        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/vector-4.svg"
+        alt="Vector decorativo"
+      />
+      <img
+        class="vector-a2"
+        src="https://cdn.animaapp.com/projects/6771ef9a103aabd5c47bfcb5/releases/6771efb52d989b86f5440e42/img/rectangle-5803.png"
+        alt="Rectangle decorativo"
+      />
+    </section>
     <!-- Estructura HTML mejorada para la sección veinte -->
+    <br />
+    <section class="twentieth">
+      <div class="text-column">
+        <h1>
+          Juntos por la<br />
+          educación
+        </h1>
+        <h6>Estamos listos para invertir juntos en la educación</h6>
+        <a href="mailto:maria@vamoseducacion.com">maria@vamoseducacion.com</a>
+      </div>
+      <div class="image-final">
+        <img src="img\image (3).png" alt="Imagen de ejemplo" />
+      </div>
+      
+    </section>
 
-<section class="twentieth">
-  <div class="text-column">
-    <h1>Juntos por la<br> educación</h1>
-    <h6>Estamos listos para invertir juntos en la educación</h6>
-    <a href="mailto:maria@vamoseducacion.com">maria@vamoseducacion.com</a>
-  </div>
-  <img src="img/2.jpeg" alt="Imagen de ejemplo">
-</section>
+    <footer class="new-footer">
+      <!-- Contenedor izquierdo -->
+      <div class="footer-left">
+        <img src="img/logo.svg" alt="Logo VAMOS" class="footer-logo" />
+        <p class="footer-paragraph">
+          Partnering on impactful technological ventures
+          <b>that drive the development</b> of individual and collective
+          awareness for
+        </p>
+        <h1 class="footer-title">
+          <b
+            >a better life<br />
+            and human unity.</b
+          >
+        </h1>
+      </div>
 
-  
-  
-<footer class="new-footer">
-        <!-- Contenedor izquierdo -->
-        <div class="footer-left">
-            <img src="img/logo.svg" alt="Logo VAMOS" class="footer-logo">
-            <p class="footer-paragraph">
-                Partnering on impactful technological ventures <b>that drive the
-                development</b> of individual and collective awareness for
-            </p>
-            <h1 class="footer-title"><b>a better life<br> and human unity.</b></h1>
+      <!-- Contenedor derecho -->
+      <div class="footer-right">
+        <div class="social-logos">
+          <!-- Instagram -->
+          <a
+            href="https://www.instagram.com/hola.thincrs/"
+            target="_blank"
+            class="social-icon"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+              />
+            </svg>
+          </a>
+
+          <!-- TikTok -->
+          <a href="#" target="_blank" class="social-icon">
+            <svg
+              width="27"
+              height="31"
+              viewBox="0 0 27 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26.3447 7.85402C24.6314 7.85402 23.0472 7.28488 21.7799 6.32849C20.3247 5.23129 19.2745 3.61776 18.9048 1.76366C18.811 1.306 18.764 0.830744 18.7582 0.34375H13.8589V13.7273L13.853 21.0557C13.853 23.0154 12.5739 24.6758 10.8078 25.2626C10.2915 25.4327 9.73996 25.5149 9.16496 25.4797C8.42566 25.4386 7.73918 25.2156 7.13484 24.8577C5.85574 24.095 4.99324 22.7103 4.96977 21.1202C4.93456 18.6442 6.93535 16.6199 9.41139 16.6199C9.89838 16.6199 10.3678 16.7021 10.8078 16.8429V13.1875V11.8791C10.3443 11.8086 9.87491 11.7734 9.39378 11.7734C6.68305 11.7734 4.14833 12.9 2.33531 14.9301C0.968203 16.4615 0.146767 18.4212 0.0176843 20.4748C-0.146603 23.1679 0.839119 25.732 2.75189 27.6213C3.03353 27.897 3.3269 28.1552 3.63787 28.3958C5.27487 29.6573 7.28152 30.3438 9.39378 30.3438C9.86904 30.3438 10.3443 30.3085 10.8078 30.2381C12.7793 29.9448 14.5982 29.0412 16.0357 27.6213C17.8018 25.8787 18.7758 23.561 18.7875 21.0967L18.764 10.1482C19.6031 10.7995 20.5242 11.3334 21.5158 11.75C23.0531 12.4012 24.6842 12.724 26.3564 12.724V9.16831V7.84815C26.3623 7.85402 26.3447 7.85402 26.3447 7.85402Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a
+            href="https://www.facebook.com/hello.thincrs/"
+            target="_blank"
+            class="social-icon"
+          >
+            <svg
+              width="22"
+              height="41"
+              viewBox="0 0 22 41"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.8689 22.6738L20.9709 15.4894H14.0777V10.8292C14.0777 8.86317 15.0388 6.94569 18.1262 6.94569H21.2621V0.829187C21.2621 0.829187 18.4175 0.34375 15.699 0.34375C10.0243 0.34375 6.31068 3.78064 6.31068 10.0137V15.4894H0V22.6738H6.31068V40.3438H14.0777V22.6738H19.8689Z"
+                fill="white"
+              />
+            </svg>
+          </a>
         </div>
-    
-        <!-- Contenedor derecho -->
-        <div class="footer-right">
-            <div class="social-logos">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/hola.thincrs/" target="_blank" class="social-icon">
-    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-    </svg>
-</a>
-    
-                <!-- TikTok -->
-                <a href="#" target="_blank" class="social-icon">
-                    <svg width="27" height="31" viewBox="0 0 27 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M26.3447 7.85402C24.6314 7.85402 23.0472 7.28488 21.7799 6.32849C20.3247 5.23129 19.2745 3.61776 18.9048 1.76366C18.811 1.306 18.764 0.830744 18.7582 0.34375H13.8589V13.7273L13.853 21.0557C13.853 23.0154 12.5739 24.6758 10.8078 25.2626C10.2915 25.4327 9.73996 25.5149 9.16496 25.4797C8.42566 25.4386 7.73918 25.2156 7.13484 24.8577C5.85574 24.095 4.99324 22.7103 4.96977 21.1202C4.93456 18.6442 6.93535 16.6199 9.41139 16.6199C9.89838 16.6199 10.3678 16.7021 10.8078 16.8429V13.1875V11.8791C10.3443 11.8086 9.87491 11.7734 9.39378 11.7734C6.68305 11.7734 4.14833 12.9 2.33531 14.9301C0.968203 16.4615 0.146767 18.4212 0.0176843 20.4748C-0.146603 23.1679 0.839119 25.732 2.75189 27.6213C3.03353 27.897 3.3269 28.1552 3.63787 28.3958C5.27487 29.6573 7.28152 30.3438 9.39378 30.3438C9.86904 30.3438 10.3443 30.3085 10.8078 30.2381C12.7793 29.9448 14.5982 29.0412 16.0357 27.6213C17.8018 25.8787 18.7758 23.561 18.7875 21.0967L18.764 10.1482C19.6031 10.7995 20.5242 11.3334 21.5158 11.75C23.0531 12.4012 24.6842 12.724 26.3564 12.724V9.16831V7.84815C26.3623 7.85402 26.3447 7.85402 26.3447 7.85402Z" fill="white"/>
-                    </svg>
-                </a>
-    
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/hello.thincrs/" target="_blank" class="social-icon">
-                    <svg width="22" height="41" viewBox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.8689 22.6738L20.9709 15.4894H14.0777V10.8292C14.0777 8.86317 15.0388 6.94569 18.1262 6.94569H21.2621V0.829187C21.2621 0.829187 18.4175 0.34375 15.699 0.34375C10.0243 0.34375 6.31068 3.78064 6.31068 10.0137V15.4894H0V22.6738H6.31068V40.3438H14.0777V22.6738H19.8689Z" fill="white"/>
-                    </svg>
-                </a>
-            </div>
-            <p class="copyright">Vamos. All rights reserved. © 2023.</p>
-        </div>
+        <p class="copyright">Vamos. All rights reserved. © 2023.</p>
+      </div>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="app.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
 </html>

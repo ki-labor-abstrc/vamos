@@ -94,14 +94,9 @@ section {
   background-color: white;
 }
 
-/* Color de fondo blanco para la novena sección */
 
-/* 
-  Estilos para la barra de navegación 
-  - Ajusta el espacio entre el texto y el icono del dropdown.
-*/
 /* Estilos generales del navbar */
-/* Estilos mejorados para los botones del navbar */
+
 
 /* Estilos para los links de navegación */
 .navbar-nav .nav-item {
@@ -151,7 +146,9 @@ section {
   border-bottom: 2px solid #020202;
 }
 
-Ajuste del Tamaño del Logo en el Navbar
+.container-fluid {
+  padding: 0 4rem;
+}
 
 /* Ajuste para el tamaño del logo en el navbar */
 .navbar-brand img {
@@ -193,24 +190,40 @@ Ajuste del Tamaño del Logo en el Navbar
 .first {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 140vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 80px; /* Compensar la barra de navegación fija */
+  padding-top: 80px;
 }
 
-/* Imagen de fondo */
-.first .screen-shot-2023-09-26-at-1439-1-1wMAcK {
+.first .background-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Volvemos a 'cover' para que llene todo el espacio */
   z-index: -1;
+ 
+  object-position: center center; /* Puedes ajustar estos valores (por ejemplo: '50% 40%') */
+}
+
+/* Media query para controlar el comportamiento en diferentes tamaños */
+@media (max-width: 1365px) {
+  .first .background-image {
+    /* Podemos ajustar la posición para pantallas más pequeñas */
+    object-position: center center;
+  }
+}
+
+@media (min-width: 1366px) {
+  .first .background-image {
+    /* Para pantallas grandes, ajustamos para que se vea similar */
+    object-position: center 50%; /* Ajusta el segundo valor (vertical) según necesites */
+  }
 }
 
 /* Vector decorativo */
@@ -332,6 +345,9 @@ Ajuste del Tamaño del Logo en el Navbar
     width: 50px;
   }
   
+  .first .background-image{
+    min-height: 140vh;
+  }
   .first .vector-1wMAcK {
     width: 45%;
     opacity: 0.7;
@@ -344,7 +360,9 @@ Ajuste del Tamaño del Logo en el Navbar
     margin-left: 8%;
     width: 92%;
   }
-  
+  .first .background-image{
+    min-height: 100vh !important;
+  }
   .first .title-1wMAcK {
     font-size: 3.2rem;
     width: 90%;
@@ -374,7 +392,9 @@ Ajuste del Tamaño del Logo en el Navbar
     margin-left: 5%;
     width: 95%;
   }
-  
+  .first .background-image{
+    min-height: 100vh !important;
+  }
   .first .title-1wMAcK {
     font-size: 2.5rem;
     width: 100%;
@@ -404,7 +424,9 @@ Ajuste del Tamaño del Logo en el Navbar
   .first .title-1wMAcK {
     font-size: 2.2rem;
   }
-  
+  .first .background-image{
+    min-height: 100vh;
+  }
   .first .invierte-en-lo-ms-po-1wMAcK {
     font-size: 1rem;
   }
@@ -508,25 +530,203 @@ Ajuste del Tamaño del Logo en el Navbar
 
 /* Ultra Wide: 1920px y superior */
 @media (min-width: 1920px) {
-  .second .content {
-    max-width: 1800px;
-  }
+.second {
+  position: relative;
+  width: 100%;
+  min-height: 130vh;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contenedor principal */
+.second .content {
+  display: flex;
+  margin: 5rem;
+  width: 90%;
+  position: relative;
+  justify-content: start; /* Centramos los elementos */
+}
+
+/* Sección derecha con texto */
+.second .right-section {
+  width: 50%;
+  height: 110vh;
+  background-color: #4DA0E5;
+  padding: 4rem;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Reducimos el z-index para que pueda quedar por debajo si es necesario */
+ /* Movemos hacia la izquierda para crear superposición */
+}
+
+.second .right-section h1 {
+  font-size: clamp(2.2rem, 4vw, 4.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.second .right-section p {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  line-height:2;
+  color: #ffffff;
+  width: 80%;
+  margin-bottom: 1.5rem;
   
-  .second .right-section {
-    padding: 5rem;
-  }
-  
-  .second .vector-G6t8xS {
-    width: 250px;
-    height: 250px;
-  }
+}
+
+.second .right-section span {
+  font-weight: 700;
+}
+
+.second .right-section h6 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  width: 80%;
+  line-height: 2
+}
+
+/* Sección izquierda con imagen */
+.second .left-section {
+  top: 5%;
+  width: 55%;
+  right:5%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Mayor z-index para sobreposición */
+  margin-right: -5%; /* Movemos hacia la derecha para crear superposición */
+}
+
+
+.second .left-section img {
+  width: 90%;
+  height: 110vh;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Vector decorativo */
+.second .vector-G6t8xS {
+  position: absolute;
+  width: 217px;
+  height: 217px;
+  right: 45%;
+  top: 40%;
+  z-index: 3;
+}
 }
 
 /* Desktop grande: 1440px - 1919px */
 @media (min-width: 1440px) and (max-width: 1919px) {
-  .second .content {
-    max-width: 1400px;
-  }
+  /***********************************SEGUNDA SECCION**************************/
+/* Estilos base de la segunda sección */
+/* Estilos base mejorados para la segunda sección */
+.second {
+  position: relative;
+  width: 100%;
+  min-height: 130vh;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Contenedor principal */
+.second .content {
+  display: flex;
+  margin: 5rem;
+  width: 90%;
+  position: relative;
+  justify-content: start; /* Centramos los elementos */
+}
+
+/* Sección derecha con texto */
+.second .right-section {
+  width: 50%;
+  height: 110vh;
+  background-color: #4DA0E5;
+  padding: 4rem;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1; /* Reducimos el z-index para que pueda quedar por debajo si es necesario */
+ /* Movemos hacia la izquierda para crear superposición */
+}
+
+.second .right-section h1 {
+  font-size: clamp(2.2rem, 4vw, 4.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.second .right-section p {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  line-height:2;
+  color: #ffffff;
+  width: 80%;
+  margin-bottom: 1.5rem;
+  
+}
+
+.second .right-section span {
+  font-weight: 700;
+}
+
+.second .right-section h6 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  width: 80%;
+  line-height: 2
+}
+
+/* Sección izquierda con imagen */
+.second .left-section {
+  top: 5%;
+  width: 55%;
+  right:5%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Mayor z-index para sobreposición */
+  margin-right: -5%; /* Movemos hacia la derecha para crear superposición */
+}
+
+
+.second .left-section img {
+  width: 90%;
+  height: 110vh;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Vector decorativo */
+.second .vector-G6t8xS {
+  position: absolute;
+  width: 217px;
+  height: 217px;
+  right: 45%;
+  top: 40%;
+  z-index: 3;
+}
 }
 
 /* Desktop: 1024px - 1439px */
@@ -729,20 +929,68 @@ Ajuste del Tamaño del Logo en el Navbar
 
 /* Ultra Wide: 1920px y superior */
 @media (min-width: 1920px) {
-  .fourth {
-    padding: 8rem 4rem;
-  }
-  
-  .fourth .qu-es-vamos-1wMAcK {
-    max-width: 1000px;
-    font-size: 4.5rem;
-  }
-  
-  .fourth .somos-un-fondo-dedic-1wMAcK,
-  .fourth .con-ms-de-27-aos-en-1wMAcK {
-    max-width: 900px;
-    font-size: 1.3rem;
-  }
+  /* Estilos base mejorados para la cuarta sección */
+.fourth {
+  position: relative;
+  width: 100%;
+  min-height: 120vh;
+  background-color: #6676D1;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  overflow: hidden;
+}
+
+/* Vector decorativo */
+.fourth .vector-qz4p61 {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  right: -30%;
+  top: 20%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Título principal */
+.fourth .qu-es-vamos-1wMAcK {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 7rem;
+  line-height: 1.2;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  width: 30%;
+  max-width: 900px;
+  text-align: start;
+  margin-left: 10%;
+}
+
+/* Textos descriptivos */
+.fourth .somos-un-fondo-dedic-1wMAcK,
+.fourth .con-ms-de-27-aos-en-1wMAcK {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  width: 60%;
+  max-width: 800px;
+  text-align: start;
+  margin-left: 10%;
+}
+
+.fourth .somos-un-fondo-dedic-1wMAcK {
+  font-weight: 700;
+}
+
+.fourth .con-ms-de-27-aos-en-1wMAcK {
+  font-weight: 500;
+}
 }
 
 /* Desktop: 1024px - 1439px */
@@ -849,7 +1097,136 @@ Ajuste del Tamaño del Logo en el Navbar
   }
 }
 
+
+
 /* Estilos base corregidos para la quinta sección */
+.fifth {
+
+  margin: 0;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding-bottom: 5rem;
+  width: 100%;
+  height: auto;
+  /* Centra el texto en los elementos hijos */
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.fifth .image-section {
+  margin-top: 1rem;
+  margin-left: 3rem;
+  z-index: 1;
+  order: 1 !important;
+}
+
+.fifth .image-section,
+.fifth .text-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.fifth .image-section img {
+  margin-left: 10%;
+  width: 80%;
+  object-fit: contain;
+  height: 100vh;
+}
+
+.fifth strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.fifth .text-section {
+  padding: 20px;
+  margin-top: 1rem;
+  order: 2;
+}
+
+.fifth .vector {
+  position: absolute;
+  background-color: transparent;
+  z-index: 2;
+  opacity: 1;
+  mix-blend-mode: multiply;
+  /* Mezclar con el fondo */
+  top: 30%;
+  left: -10%;
+}
+
+.fifth .text-section h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.fifth .text-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fifth .text-section li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.fifth .text-section li img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.fifth .text-section li p {
+  margin: 0;
+  font-size: 1.1rem;
+  width: 70%;
+}
+
+/* Estilos para dispositivos grandes */
+@media (min-width: 1200px) {
+  .fifth .container {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  .fifth .image-section {
+    order: 2; /* Imagen a la derecha en desktop */
+    width: 40%;
+  }
+  
+  .fifth .text-section {
+    order: 1; /* Texto a la izquierda en desktop */
+    width: 55%;
+    padding-right: 1rem;
+  }
+}
+
+/* Desktop: 1024px - 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .fifth .container {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .fifth .image-section {
+    order: 2;
+    width: 45%;
+  }
+  
+  .fifth .text-section {
+    order: 1;
+    width: 50%;
+  }
+}
+
+/* Tablet landscape: 769px - 1023px */
+@media (min-width: 769px) and (max-width: 1023px) {
+  /* Estilos base corregidos para la quinta sección */
 .fifth {
   position: relative;
   width: 100%;
@@ -953,68 +1330,114 @@ Ajuste del Tamaño del Logo en el Navbar
   margin-bottom: 0.5rem;
   font-weight: 800;
 }
-
-/* Estilos para dispositivos grandes */
-@media (min-width: 1200px) {
-  .fifth .container {
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-  
-  .fifth .image-section {
-    order: 2; /* Imagen a la derecha en desktop */
-    width: 40%;
-  }
-  
-  .fifth .text-section {
-    order: 1; /* Texto a la izquierda en desktop */
-    width: 55%;
-    padding-right: 1rem;
-  }
-}
-
-/* Desktop: 1024px - 1199px */
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .fifth .container {
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .fifth .image-section {
-    order: 2;
-    width: 45%;
-  }
-  
-  .fifth .text-section {
-    order: 1;
-    width: 50%;
-  }
-}
-
-/* Tablet landscape: 769px - 1023px */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .fifth {
-    padding: 4rem 2rem;
-  }
-  
-  .fifth .container {
-    gap: 3rem;
-  }
-  
-  .fifth .image-section, 
-  .fifth .text-section {
-    max-width: 650px;
-  }
-  
-  .fifth .text-section li img {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 /* Tablet portrait: 481px - 768px */
 @media (min-width: 481px) and (max-width: 768px) {
+  /* Estilos base corregidos para la quinta sección */
+.fifth {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para asegurar que todo el contenido quepa */
+  align-items: center;
+  background-color: #ffffff;
+  overflow: visible; /* Cambiado para evitar recortes */
+}
+
+/* Vector decorativo */
+.fifth .vector {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  left: -15%;
+  top: 30%;
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Contenedor principal */
+.fifth .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sección de imagen */
+.fifth .image-section {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.fifth .image-section img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+/* Sección de texto */
+.fifth .text-section {
+  width: 100%;
+  max-width: 600px;
+}
+
+.fifth .text-section h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #000;
+}
+
+/* Lista de características */
+.fifth .text-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.fifth .text-section li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.fifth .text-section li img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.fifth .text-section li p {
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.fifth .text-section li strong {
+  display: block;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
   .fifth {
     padding: 3rem 1.5rem;
     min-height: auto;
@@ -1037,41 +1460,112 @@ Ajuste del Tamaño del Logo en el Navbar
 
 /* Móvil: 480px y menor */
 @media (max-width: 480px) {
-  .fifth {
-    padding: 2.5rem 1.2rem;
-  }
-  
-  .fifth .container {
-    gap: 2rem;
-  }
-  
-  .fifth .image-section {
-    max-width: 100%;
-  }
-  
-  .fifth .text-section h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .fifth .text-section li {
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .fifth .text-section li img {
-    width: 45px;
-    height: 45px;
-  }
-  
-  .fifth .text-section li strong {
-    font-size: 1.2rem;
-  }
-  
-  .fifth .text-section li p {
-    font-size: 0.95rem;
-  }
+  /* Estilos base corregidos para la quinta sección */
+.fifth {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column; /* Cambiado a columna para asegurar que todo el contenido quepa */
+  align-items: center;
+  background-color: #ffffff;
+  overflow: visible; /* Cambiado para evitar recortes */
+}
+
+/* Vector decorativo */
+.fifth .vector {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: -15%;
+  top: 30%;
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Contenedor principal */
+.fifth .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Sección de imagen */
+.fifth .image-section {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.fifth .image-section img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin-left: -15% !important;
+}
+
+/* Sección de texto */
+.fifth .text-section {
+  width: 100%;
+  max-width: 600px;
+}
+
+.fifth .text-section h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: #000;
+  width: 100% !important;
+}
+
+/* Lista de características */
+.fifth .text-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.fifth .text-section li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.fifth .text-section li img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.fifth .text-section li p {
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.6;
+}
+
+.fifth .text-section li strong {
+  display: block;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
 }
 
 /* Ajustes para móviles muy pequeños */
@@ -1094,236 +1588,275 @@ Ajuste del Tamaño del Logo en el Navbar
   }
 }
 
+:root {
+  --n-black: #000000;
+  --screamin-green: #8cfc6d;
+  --white: #ffffff;
+
+  --font-size-l: 25px;
+  --font-size-m: 20px;
+  --font-size-s: 18px;
+  --font-size-xl: 30px;
+  --font-size-xxl: 64px;
+  --font-size-xxxl: 65px;
+  --font-size-xxxxl: 100px;
+
+  --font-family-nunito_sans: "Nunito Sans", Helvetica;
+}
 
 /******************SECCION CATORCE***********************/
 
 /* Estilos mejorados para la sección catorce */
 .fourteenth {
-  width: 100%;
-  min-height: auto; /* Cambiado de 130vh a auto para adaptarse al contenido */
-  padding: 5rem 2rem;
+  padding: 5vh 0;
   background-color: #ffffff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: visible; /* Cambiado para evitar recortes de contenido */
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+  background-color: var(--white);
+  height: 130vh;
+  /* Cambiado a viewport height */
+  overflow-x: hidden;
 }
 
-/* Títulos principales */
 .fourteenth .co-invertimos-en-pro-1wMAcK {
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-  margin: 0 auto 2rem;
-  font-size: clamp(2.2rem, 4vw, 4rem);
-  line-height: 1.3;
+  background-color: transparent;
+  height: auto;
+  left: 12vw;
   font-weight: 800;
-  color: #000000;
+  font-size: clamp(2rem, 4vw, 5rem);
+  /* Convertido a viewport width */
+  letter-spacing: 0;
+  line-height: 4.5rem;
+  position: absolute;
+  text-align: left;
+  top: 10%;
+  width: 80%;
 }
 
 .fourteenth .impulsamos-y-vincula-1wMAcK {
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-  margin: 0 auto 4rem;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  line-height: 1.6;
+  background-color: transparent;
+  height: auto;
+  left: 12vw;
+  font-size : 1.5rem;
   font-weight: 600;
-  color: #000000;
+  letter-spacing: -0.04em;
+  line-height: 2.25rem;
+  position: absolute;
+  text-align: left;
+  top: 30%;
+  width: 40vw;
+  
 }
 
-/* Contenedor para los procesos */
-.fourteenth .process-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* Elemento individual del proceso */
-.fourteenth .process-item {
-  flex: 1;
-  min-width: 250px;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-  position: relative;
-}
-
-/* Número del proceso */
-.fourteenth [class^="x"] {
-  font-size: 5rem;
-  font-weight: 800;
-  line-height: 1;
-  margin-bottom: 1rem;
-}
-
-.fourteenth .x1-1wMAcK {
-  color: #8cfc6d; /* Verde */
-}
-
-.fourteenth .x2-1wMAcK {
-  color: #6676d1; /* Azul */
-}
-
-.fourteenth .x3-1wMAcK {
-  color: #4da0e5; /* Azul claro */
-}
-
-/* Iconos */
-.fourteenth [class^="icon-"],
-.fourteenth .group-39815-1wMAcK {
-  width: 60px;
-  height: 60px;
-  margin: 1rem 0;
-  object-fit: contain;
-}
-
-/* Textos descriptivos */
-.fourteenth [class*="seleccin"],
-.fourteenth [class*="vinculacin"],
-.fourteenth [class*="bootcamps"] {
-  text-align: center;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-  line-height: 1.6;
-  font-weight: 600;
-  color: #000000;
-  margin-top: 1rem;
-}
-
-/* Ocultar rectángulos que no se necesitan en diseño responsivo */
 .fourteenth .rectangle-5794-1wMAcK,
 .fourteenth .rectangle-5795-1wMAcK,
 .fourteenth .rectangle-5796-1wMAcK {
-  display: none;
+  background-color: transparent;
+  height: 45%;
+  position: absolute;
+  top: 55vh;
+  width: 6vw;
 }
 
-/* Media queries para tabletas grandes */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .fourteenth {
-    padding: 4rem 2rem;
-  }
-  
-  .fourteenth .process-container {
-    gap: 2rem;
-  }
-  
-  .fourteenth .process-item {
-    min-width: 220px;
-  }
-  
-  .fourteenth [class^="x"] {
-    font-size: 4.5rem;
-  }
+.fourteenth .rectangle-5794-1wMAcK {
+  left: 12vw;
 }
 
-/* Media queries para tabletas */
-@media (min-width: 768px) and (max-width: 991px) {
-  .fourteenth {
-    padding: 3.5rem 1.5rem;
-  }
-  
-  .fourteenth .co-invertimos-en-pro-1wMAcK {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .fourteenth .impulsamos-y-vincula-1wMAcK {
-    margin-bottom: 3rem;
-  }
-  
-  .fourteenth .process-container {
-    gap: 1.5rem;
-  }
-  
-  .fourteenth .process-item {
-    min-width: 200px;
-    padding: 1rem;
-  }
-  
-  .fourteenth [class^="x"] {
-    font-size: 4rem;
-  }
-  
-  .fourteenth [class^="icon-"],
-  .fourteenth .group-39815-1wMAcK {
-    width: 50px;
-    height: 50px;
-  }
+.fourteenth .rectangle-5795-1wMAcK {
+  left: 37vw;
 }
 
-/* Media queries para móviles */
-@media (max-width: 767px) {
+.fourteenth .rectangle-5796-1wMAcK {
+  left: 62vw;
+}
+
+/* Estilos comunes para los números */
+.fourteenth [class^="x"] {
+  background-color: transparent;
+  font-size: clamp(2rem, 4vw, 4rem);
+  /* Tamaño de fuente responsive */
+  font-style: normal;
+  font-weight: 800;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 1.5;
+  position: absolute;
+  text-align: left;
+  top: 55%;
+  white-space: nowrap;
+  width: auto;
+}
+
+.fourteenth .x1-1wMAcK,
+.fourteenth .x2-1wMAcK,
+.fourteenth .x3-1wMAcK {
+  font-size: 6rem;
+}
+
+.fourteenth .x1-1wMAcK {
+  color: var(--screamin-green);
+  left: 19vw;
+}
+
+.fourteenth .x2-1wMAcK {
+  color: #6676d1;
+  left: 45vw;
+}
+
+.fourteenth .x3-1wMAcK {
+  color: #4da0e5;
+  left: 71vw;
+}
+
+/* Estilos comunes para los iconos */
+.fourteenth [class^="icon-"],
+.fourteenth .group-39815-1wMAcK {
+  background-color: transparent;
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  top: 60%;
+}
+
+.fourteenth .group-39815-1wMAcK {
+  left: 13vw;
+}
+
+.fourteenth .icon-identification-1wMAcK {
+  left: 38vw;
+}
+
+.fourteenth .icon-star-1wMAcK {
+  left: 63vw;
+}
+
+/* Estilos comunes para los textos descriptivos */
+.fourteenth [class*="seleccin"],
+.fourteenth [class*="vinculacin"],
+.fourteenth [class*="bootcamps"] {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: -0.04em;
+  line-height: 2.25rem;
+  position: absolute;
+  text-align: left;
+  top: 70%;
+  width: 15vw;
+}
+
+.fourteenth .seleccin-de-candidat-1wMAcK {
+  left: 19vw;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.fourteenth .vinculacin-con-traba-1wMAcK {
+  left: 45vw;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.fourteenth .bootcamps-de-especia-1wMAcK {
+  left: 71vw;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+/* Estilos para pantallas medianas (tablets y laptops pequeñas) */
+@media (max-width: 1024px) {
   .fourteenth {
-    padding: 3rem 1rem;
-  }
-  
-  .fourteenth .co-invertimos-en-pro-1wMAcK {
-    font-size: 2.5rem;
-    line-height: 1.3;
-    margin-bottom: 1.5rem;
-  }
-  
-  .fourteenth .impulsamos-y-vincula-1wMAcK {
-    font-size: 1rem;
-    margin-bottom: 2.5rem;
-  }
-  
-  .fourteenth .process-container {
     flex-direction: column;
-    align-items: center;
-    gap: 3rem;
+    height: auto;
+    padding: 10vh 5vw;
   }
-  
-  .fourteenth .process-item {
+
+  .fourteenth .co-invertimos-en-pro-1wMAcK,
+  .fourteenth .impulsamos-y-vincula-1wMAcK {
+    position: relative;
+    left: auto;
+    top: auto;
     width: 100%;
-    max-width: 300px;
+    text-align: center;
   }
-}
 
-/* Ajustes para móviles pequeños */
-@media (max-width: 480px) {
-  .fourteenth {
-    padding: 2.5rem 1rem;
+  .fourteenth .rectangle-5794-1wMAcK,
+  .fourteenth .rectangle-5795-1wMAcK,
+  .fourteenth .rectangle-5796-1wMAcK{
+    display: none;
   }
-  
-  .fourteenth .co-invertimos-en-pro-1wMAcK {
-    font-size: 2rem;
-  }
-  
-  .fourteenth [class^="x"] {
-    font-size: 3.5rem;
-  }
-  
-  .fourteenth [class^="icon-"],
-  .fourteenth .group-39815-1wMAcK {
-    width: 45px;
-    height: 45px;
-  }
-}
 
-/* Ajustes para móviles muy pequeños */
-@media (max-width: 360px) {
-  .fourteenth .co-invertimos-en-pro-1wMAcK {
-    font-size: 1.8rem;
+  .fourteenth .x1-1wMAcK,
+  .fourteenth .x2-1wMAcK,
+  .fourteenth .x3-1wMAcK,
+  .fourteenth .group-39815-1wMAcK,
+  .fourteenth .icon-identification-1wMAcK,
+  .fourteenth .icon-star-1wMAcK,
+  .fourteenth .seleccin-de-candidat-1wMAcK,
+  .fourteenth .vinculacin-con-traba-1wMAcK,
+  .fourteenth .bootcamps-de-especia-1wMAcK {
+    position: relative;
+    left: auto;
+    top: auto;
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
   }
-  
-  .fourteenth [class^="x"] {
-    font-size: 3rem;
-  }
-  
+
   .fourteenth [class*="seleccin"],
   .fourteenth [class*="vinculacin"],
   .fourteenth [class*="bootcamps"] {
-    font-size: 0.9rem;
+    width: 80%;
+    font-size: 1.25rem;
+  }
+
+
+.fourteenth .group-39815-1wMAcK {
+  background-color: var(--screamin-green);
+}
+
+.fourteenth .icon-identification-1wMAcK {
+  background-color: #6676d1;
+}
+
+.fourteenth .icon-star-1wMAcK {
+  background-color: #4da0e5;
+}
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .fourteenth .co-invertimos-en-pro-1wMAcK {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .fourteenth .impulsamos-y-vincula-1wMAcK {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .fourteenth [class^="x"] {
+    font-size: 3rem;
+  }
+
+  .fourteenth [class*="seleccin"],
+  .fourteenth [class*="vinculacin"],
+  .fourteenth [class*="bootcamps"] {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .fourteenth [class^="icon-"],
+  .fourteenth .group-39815-1wMAcK {
+    width: 3rem;
+    height: 3rem;
   }
 }
+
 
 /******************SECCION QUINCE***********************/
 /* Estilos mejorados para la sección quince */
@@ -1435,7 +1968,7 @@ Ajuste del Tamaño del Logo en el Navbar
 }
 
 .fifteenth .icon3 {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 /* Estilos para ultra wide */
@@ -1597,12 +2130,7 @@ Ajuste del Tamaño del Logo en el Navbar
   }
 }
 
-/* 
-=========================================
-  ESTILOS COMUNES PARA SECCIONES 16, 17 Y 18
-  (Imagen grande con texto superpuesto)
-=========================================
-*/
+
 
 /* 
 =========================================
@@ -1617,11 +2145,11 @@ Ajuste del Tamaño del Logo en el Navbar
 .eighteenth {
   position: relative;
   width: 100%;
-  min-height: auto;
+  height: auto;
   padding: 0;
   background-color: #ffffff;
-  overflow: hidden;
-  margin-bottom: 6rem;
+  
+  
 }
 
 /* Contenedor de imagen */
@@ -1629,7 +2157,6 @@ Ajuste del Tamaño del Logo en el Navbar
 .seventeenth .container,
 .eighteenth .container {
   width: 100%;
-  position: relative;
 }
 
 /* Imagen principal */
@@ -1637,10 +2164,11 @@ Ajuste del Tamaño del Logo en el Navbar
 .seventeenth img,
 .eighteenth img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 90vh;
+  object-fit: contain;
   display: block;
 }
+
 
 /* Contenedor de texto */
 .sixteenth .text-container,
@@ -1780,120 +2308,73 @@ Ajuste del Tamaño del Logo en el Navbar
     border-radius: 30px;
   }
 }
-
-/* Tablets */
-@media (min-width: 768px) and (max-width: 991px) {
-  .sixteenth,
-  .seventeenth,
-  .eighteenth {
-    margin-bottom: 6rem;
+/* Estilos para pantallas medianas y pequeñas: diseño en columna */
+@media (max-width: 1024px) {
+  .sixteenth .container,
+  .seventeenth .container,
+  .eighteenth .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .sixteenth img,
+  .seventeenth img,
+  .eighteenth img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: cover;
+  }
+
   .sixteenth .text-container,
   .seventeenth .text-container,
   .eighteenth .text-container {
-    max-width: 500px;
-    padding: 3.5rem 3rem 3rem;
-    border-radius: 25px;
-    margin-top: -60px;
-  }
-  
-  .sixteenth h1,
-  .seventeenth h1,
-  .eighteenth h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.4rem;
-  }
-}
-
-/* Móviles */
-@media (max-width: 767px) {
-  .sixteenth,
-  .seventeenth,
-  .eighteenth {
-    margin-bottom: 5rem;
-  }
-  
-  .sixteenth .text-container,
-  .seventeenth .text-container,
-  .eighteenth .text-container {
+    position: static; /* Ya no flota encima de la imagen */
     width: 90%;
-    max-width: 450px;
-    padding: 3rem 2.5rem 2.5rem;
-    border-radius: 25px;
-    margin-top: -50px;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    padding: 2rem 1.5rem;
   }
-  
+
   .sixteenth h1,
   .seventeenth h1,
   .eighteenth h1 {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    text-align: center;
   }
-  
+
   .sixteenth p,
   .seventeenth p,
   .eighteenth p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.7;
+    text-align: center;
   }
 }
 
-/* Móviles pequeños */
-@media (max-width: 480px) {
-  .sixteenth,
-  .seventeenth,
-  .eighteenth {
-    margin-bottom: 4rem;
-  }
-  
+/* Estilos adicionales para móviles */
+@media (max-width: 600px) {
   .sixteenth .text-container,
   .seventeenth .text-container,
   .eighteenth .text-container {
-    width: 92%;
-    padding: 2.8rem 2rem 2rem;
-    border-radius: 20px;
-    margin-top: -40px;
+    padding: 1.5rem 1rem;
+    margin: 1rem auto;
   }
-  
-  .sixteenth h1,
-  .seventeenth h1,
-  .eighteenth h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  .sixteenth p,
-  .seventeenth p,
-  .eighteenth p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-}
 
-/* Móviles muy pequeños */
-@media (max-width: 360px) {
-  .sixteenth .text-container,
-  .seventeenth .text-container,
-  .eighteenth .text-container {
-    width: 94%;
-    padding: 2.5rem 1.8rem 1.8rem;
-    border-radius: 20px;
-    margin-top: -30px;
-  }
-  
   .sixteenth h1,
   .seventeenth h1,
   .eighteenth h1 {
     font-size: 1.6rem;
   }
-  
+
   .sixteenth p,
   .seventeenth p,
   .eighteenth p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
+
 
 /* Estilos mejorados para la sección diecinueve */
 .nineteenth {
@@ -2104,36 +2585,35 @@ Ajuste del Tamaño del Logo en el Navbar
 /*******************************************SECCION VEINTE*******************/
 /* Estilos mejorados para la sección veinte */
 .twentieth {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #4DA0E5;
-  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
 
 /* Columna de texto */
 .twentieth .text-column {
   width: 50%;
+  height: 100vh;
   padding: 5rem;
   display: flex;
+  background-color: #4DA0E5;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  position: relative;
-  z-index: 2;
 }
 
-/* Imagen */
-.twentieth img {
-  position: absolute;
-  right: 0;
-  top: 0;
+.twentieth .image-final {
   width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.twentieth .image-final img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  display: block;
 }
 
 /* Título */
@@ -2149,7 +2629,7 @@ Ajuste del Tamaño del Logo en el Navbar
 
 /* Subtítulo */
 .twentieth .text-column h6 {
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   line-height: 1.8;
   color: #ffffff !important;
   font-weight: 600;
@@ -2160,7 +2640,7 @@ Ajuste del Tamaño del Logo en el Navbar
 
 /* Enlace */
 .twentieth .text-column a {
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   color: #ffffff;
   text-decoration: none;
   font-weight: 800;
@@ -2171,119 +2651,37 @@ Ajuste del Tamaño del Logo en el Navbar
 .twentieth .text-column a:hover {
   opacity: 0.8;
 }
-
-/* Media queries para desktops grandes */
-@media (min-width: 1440px) {
-  .twentieth .text-column {
-    padding: 7rem;
-  }
-  
-  .twentieth .text-column h1 {
-    font-size: 4.5rem;
-  }
-}
-
-/* Media queries para desktops */
-@media (min-width: 1024px) and (max-width: 1439px) {
-  .twentieth .text-column {
-    padding: 5rem 4rem;
-  }
-}
-
-/* Media queries para tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .twentieth .text-column {
-    padding: 4rem 3rem;
-  }
-  
-  .twentieth .text-column h1 {
-    font-size: 3rem;
-    width: 100%;
-  }
-  
-  .twentieth .text-column h6 {
-    width: 100%;
-  }
-}
-
-/* Media queries para móviles */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .twentieth {
     flex-direction: column;
-    min-height: auto;
   }
-  
-  .twentieth .text-column {
+
+  .twentieth .text-column,
+  .twentieth .image-final {
     width: 100%;
-    padding: 4rem 2rem;
-    order: 2;
+  }
+
+  .twentieth .text-column {
+    padding: 3rem 2rem;
     align-items: center;
     text-align: center;
-  }
-  
-  .twentieth img {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    order: 1;
-  }
-  
-  .twentieth .text-column h1,
-  .twentieth .text-column h6 {
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  .twentieth .text-column h1 {
-    font-size: 2.5rem;
-    margin-top: 0;
-  }
-}
-
-/* Media queries para móviles pequeños */
-@media (max-width: 480px) {
-  .twentieth {
-    overflow: visible;
-  }
-  
-  .twentieth .text-column {
-    padding: 3rem 1.5rem;
-  }
-  
-  .twentieth img {
     height: 50vh;
   }
-  
-  .twentieth .text-column h1 {
-    font-size: 2.2rem;
-  }
-  
-  .twentieth .text-column h6 {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .twentieth .text-column a {
-    font-size: 1rem;
-  }
-}
 
-/* Media queries para móviles muy pequeños */
-@media (max-width: 360px) {
-  .twentieth .text-column {
-    padding: 2.5rem 1.2rem;
+  .twentieth .text-column h1,
+  .twentieth .text-column h6,
+  .twentieth .text-column a {
+    max-width: 100%;
+    width: 100%;
   }
-  
-  .twentieth img {
-    height: 40vh;
+
+  .twentieth .image-final {
+    height: 50%;
   }
-  
-  .twentieth .text-column h1 {
-    font-size: 2rem;
-  }
-  
-  .twentieth .text-column h6 {
-    font-size: 0.95rem;
+
+  .twentieth .image-final img {
+    height: auto;
+    max-height: 70vh;
   }
 }
 
@@ -2355,9 +2753,7 @@ Ajuste del Tamaño del Logo en el Navbar
   max-width: 300px;
   text-align: center;
   padding: 2rem 1rem;
-  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -2391,11 +2787,18 @@ Ajuste del Tamaño del Logo en el Navbar
 @media (min-width: 1440px) {
   .inversionin {
     padding: 8rem 4rem;
+    align-items: flex-start;
+  }
+
+  .inversionin .vector-7{
+    opacity: 1;
   }
   
   .inversionin .title {
-    font-size: 4.2rem;
-    max-width: 1200px;
+    font-size: 4.5rem;
+    width: 40%;
+    margin-left: 10%;
+    text-align: start;
   }
   
   .inversionin .stats {
